@@ -58,14 +58,14 @@
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             }
             .pm-btn-hover {
-                transition: all 0.3s ease;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
             .pm-btn-hover:hover {
                 transform: scale(1.05);
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             }
             .pm-card-hover {
-                transition: all 0.3s ease;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
             .pm-card-hover:hover {
                 transform: translateY(-8px);
@@ -78,6 +78,13 @@
                 box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
             }
         }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-pmLight font-pmSans text-pmDark">
@@ -87,7 +94,8 @@
             <div class="flex items-center space-x-3">
                 <img src="img/icons/icon.png" 
                      alt="掌机小精灵游戏图标" 
-                     class="h-10 w-10 rounded-lg shadow-md">
+                     class="h-10 w-10 rounded-lg shadow-md"
+                     width="40" height="40">
                 <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h1>
             </div>
             
@@ -105,8 +113,8 @@
                    class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md pm-btn-hover">
                     立即下载
                 </a>
-                <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle">
-                    <i class="fa fa-bars"></i>
+                <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle" aria-label="打开菜单">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -134,7 +142,8 @@
             <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
                 <img src="img/screenshots/screenshot-1.png" 
                      alt="掌机小精灵游戏攻略" 
-                     class="w-full h-full object-cover object-center">
+                     class="w-full h-full object-cover object-center"
+                     width="1920" height="1080">
                 <div class="absolute inset-0 pm-gradient-overlay"></div>
                 
                 <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-center">
@@ -201,7 +210,7 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-star text-pmPrimary mr-3"></i> 新手入门攻略
+                            <i class="fa fa-star text-pmPrimary mr-3" aria-hidden="true"></i> 新手入门攻略
                         </h3>
                         
                         <div class="space-y-6">
@@ -270,7 +279,7 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-pmLight rounded-xl shadow-lg p-8 mb-16">
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-pokeball text-pmSecondary mr-3"></i> 精灵培养攻略
+                            <i class="fa fa-pokeball text-pmSecondary mr-3" aria-hidden="true"></i> 精灵培养攻略
                         </h3>
                         
                         <div class="space-y-6">
@@ -337,7 +346,7 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-bolt text-pmAccent mr-3"></i> 战斗策略攻略
+                            <i class="fa fa-bolt text-pmAccent mr-3" aria-hidden="true"></i> 战斗策略攻略
                         </h3>
                         
                         <div class="space-y-6">
@@ -403,7 +412,7 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-pmLight rounded-xl shadow-lg p-8 mb-16">
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-coins text-pmPrimary mr-3"></i> 资源获取攻略
+                            <i class="fa fa-coins text-pmPrimary mr-3" aria-hidden="true"></i> 资源获取攻略
                         </h3>
                         
                         <div class="space-y-6">
@@ -503,10 +512,10 @@
                     下载游戏，应用这些攻略技巧，成为最强的精灵训练师！
                 </p>
                 
-                <a href="https://p.3633yx.com/Y3uQRj" 
+                <a href="https://p.3633yx.com/Y3uQRj"
                    class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-lg text-xl mb-10 pm-btn-hover"
                    target="_blank" rel="noopener noreferrer">
-                    <i class="fa fa-download mr-2"></i> 立即下载游戏
+                    <i class="fa fa-download mr-2" aria-hidden="true"></i> 立即下载游戏
                 </a>
             </div>
         </section>
@@ -517,21 +526,22 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center mb-10">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <img src="img/icons/icon.png" 
-                         alt="掌机小精灵游戏图标" 
-                         class="h-12 w-12 rounded-lg mr-4 shadow-md">
+                    <img src="img/icons/icon.png"
+                         alt="掌机小精灵游戏图标"
+                         class="h-12 w-12 rounded-lg mr-4 shadow-md"
+                         width="48" height="48">
                     <h2 class="text-2xl font-bold">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h2>
                 </div>
                 
                 <div class="flex space-x-6">
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-weibo"></i>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl" aria-label="微博">
+                        <i class="fa fa-weibo" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-wechat"></i>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl" aria-label="微信">
+                        <i class="fa fa-wechat" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-qq"></i>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl" aria-label="QQ">
+                        <i class="fa fa-qq" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -585,13 +595,13 @@
     </footer>
 
     <!-- 返回顶部按钮 -->
-    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
-        <i class="fa fa-arrow-up"></i>
+    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50" aria-label="返回顶部">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- 联系客服悬浮按钮 -->
-    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center">
-        <i class="fa fa-headphones mr-2"></i>
+    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center" aria-label="联系客服">
+        <i class="fa fa-headphones mr-2" aria-hidden="true"></i>
         <span class="hidden sm:inline font-bold">联系客服</span>
     </a>
 

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 掌机小精灵官网</title>
+    <meta name="keywords" content="掌机小精灵联系我们, 宝可梦手游客服, 掌机小精灵客服, 游戏客服支持">
+    <meta name="description" content="掌机小精灵官网联系我们页面，提供官方QQ群、公众号、客服支持等联系方式，解决游戏问题">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pmPrimary: '#FF5C5C',
+                        pmSecondary: '#3B82F6',
+                        pmAccent: '#FBBF24',
+                        pmDark: '#1E293B',
+                        pmLight: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        pmSans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .pm-content-auto {
+                content-visibility: auto;
+            }
+            .pm-text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            }
+            .pm-btn-hover {
+                transition: all 0.3s ease;
+            }
+            .pm-btn-hover:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            .pm-card-hover {
+                transition: all 0.3s ease;
+            }
+            .pm-card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+            .pm-gradient-overlay {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+            }
+            .pm-glow {
+                box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+            }
+        }
+    </style>
+</head>
+<body class="bg-pmLight font-pmSans text-pmDark">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="pm-header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://img1.tucang.cc/api/image/show/02e379dede3763ea2498c81c94640f8d" 
+                     alt="掌机小精灵游戏图标" 
+                     class="h-10 w-10 rounded-lg shadow-md">
+                <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">首页</a>
+                <a href="features.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">游戏特色</a>
+                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">游戏攻略</a>
+                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">兑换码</a>
+                <a href="contact.html" class="text-pmPrimary hover:text-pmPrimary transition-colors font-medium font-bold">联系我们</a>
+                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">活动文章</a>
+                <a href="https://www.nnii.cn" class="text-pmDark hover:text-pmPrimary transition-colors font-medium" target="_blank" rel="noopener noreferrer">
+                    更多宝可梦游戏
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-3">
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md pm-btn-hover">
+                    立即下载
+                </a>
+                <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 invisible transition-all duration-300 z-[-1]" id="pm-mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">首页</a>
+                <a href="features.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">游戏特色</a>
+                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">游戏攻略</a>
+                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">兑换码</a>
+                <a href="contact.html" class="text-pmPrimary hover:text-pmPrimary transition-colors py-2 border-b border-gray-100 font-bold">联系我们</a>
+                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">活动文章</a>
+                <a href="https://www.nnii.cn" class="text-pmDark hover:text-pmPrimary transition-colors py-2" target="_blank" rel="noopener noreferrer">
+                    更多宝可梦游戏
+                </a>
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="text-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md">
+                    立即下载
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 英雄区域 -->
+        <section class="relative">
+            <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
+                <img src="https://img1.tucang.cc/api/image/show/1c47860bf881ad81fe59980c3edc760a" 
+                     alt="掌机小精灵联系我们" 
+                     class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 pm-gradient-overlay"></div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-center">
+                    <h2 class="text-[clamp(2rem,6vw,3.5rem)] font-bold text-white pm-text-shadow mb-4">
+                        联系我们
+                    </h2>
+                    <p class="text-[clamp(1rem,2.5vw,1.3rem)] text-white pm-text-shadow max-w-3xl mx-auto">
+                        加入我们的社群，获取最新游戏资讯和专属客服支持
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系信息 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">联系方式</h2>
+                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        有任何问题或建议，欢迎通过以下方式联系我们
+                    </p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- 官方QQ群 -->
+                    <div class="bg-pmLight rounded-xl p-8 shadow-xl border-2 border-pmPrimary/30 transform transition-transform hover:scale-105">
+                        <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                            <i class="fa fa-qq text-pmPrimary mr-3 text-2xl"></i> 官方QQ群
+                        </h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-gray-600 w-20">群号：</span>
+                            <span class="font-bold text-pmDark">1028266021</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">加入QQ群，与其他训练家交流，获取最新活动信息和游戏攻略</p>
+                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" 
+                           class="inline-flex items-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md w-full justify-center pm-btn-hover"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-link mr-2"></i> 立即加入QQ群
+                        </a>
+                    </div>
+                    
+                    <!-- 官方公众号 -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-4 border-pmPrimary text-center max-w-xs mx-auto transform transition-all hover:rotate-1 hover:scale-105 pm-glow">
+                        <div class="inline-block p-3 bg-pmPrimary/10 rounded-full mb-6">
+                            <i class="fa fa-weixin text-4xl text-pmPrimary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4">官方公众号</h3>
+                        <p class="text-gray-600 mb-6 font-medium">小茂爱游戏</p>
+                        <p class="text-gray-600 mb-6">扫码关注获取最新兑换码、游戏资讯和专属客服礼包</p>
+                        <div class="bg-white p-4 rounded-lg inline-block shadow-md mb-6 border-2 border-gray-200">
+                            <img src="https://img1.tucang.cc/api/image/show/740495c8060eb8cc90172ce30a292ee4" 
+                                 alt="掌机小精灵官方公众号二维码：小茂爱游戏" 
+                                 class="w-64 h-64 object-contain">
+                        </div>
+                        <p class="text-pmPrimary font-bold text-sm">回复【客服】获取专属礼包</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 客服支持 -->
+        <section class="py-16 bg-pmLight">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">客服支持</h2>
+                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        我们提供全天候客服支持，解决你在游戏中遇到的问题
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-md pm-card-hover text-center">
+                        <div class="w-16 h-16 bg-pmPrimary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-comments text-2xl text-pmPrimary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-pmDark mb-4">在线客服</h3>
+                        <p class="text-gray-600 mb-4">
+                            关注公众号"小茂爱游戏"，点击右下角客服按钮，获取在线客服支持
+                        </p>
+                        <a href="#" class="text-pmPrimary font-medium hover:underline">
+                            立即联系
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-md pm-card-hover text-center">
+                        <div class="w-16 h-16 bg-pmSecondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-clock-o text-2xl text-pmSecondary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-pmDark mb-4">工作时间</h3>
+                        <p class="text-gray-600 mb-4">
+                            周一至周日：9:00-22:00
+                        </p>
+                        <p class="text-gray-600">
+                            节假日正常服务
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-md pm-card-hover text-center">
+                        <div class="w-16 h-16 bg-pmAccent/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-question-circle text-2xl text-pmAccent"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-pmDark mb-4">常见问题</h3>
+                        <p class="text-gray-600 mb-4">
+                            查看常见问题解答，快速解决游戏中遇到的问题
+                        </p>
+                        <a href="#pm-faq" class="text-pmPrimary font-medium hover:underline">
+                            查看FAQ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="pm-faq" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">常见问题</h2>
+                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="bg-pmLight rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-bold text-pmDark mb-3">游戏无法登录怎么办？</h3>
+                        <p class="text-gray-600">
+                            请检查网络连接是否正常，尝试重启游戏或设备。如果问题仍然存在，请联系客服并提供你的游戏账号和设备信息，我们会尽快为你解决。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-bold text-pmDark mb-3">如何找回账号密码？</h3>
+                        <p class="text-gray-600">
+                            如果你忘记了账号密码，可以通过游戏登录界面的"忘记密码"功能进行找回。如果无法通过该功能找回，请联系客服并提供你的账号信息，我们会协助你找回账号。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-bold text-pmDark mb-3">游戏内购买未到账怎么办？</h3>
+                        <p class="text-gray-600">
+                            请检查支付是否成功，等待10-15分钟后查看是否到账。如果仍然未到账，请联系客服并提供你的游戏账号、支付凭证和购买时间，我们会尽快为你处理。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-bold text-pmDark mb-3">如何提交游戏bug和建议？</h3>
+                        <p class="text-gray-600">
+                            你可以通过官方QQ群、公众号客服或游戏内反馈功能提交bug和建议。请详细描述问题或建议，最好提供截图，我们会认真处理每一条反馈。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-bold text-pmDark mb-3">游戏更新后出现问题怎么办？</h3>
+                        <p class="text-gray-600">
+                            游戏更新后可能会出现一些兼容性问题，请尝试重启游戏或设备。如果问题仍然存在，请联系客服并提供你的设备信息和游戏版本，我们会尽快修复。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更多宝可梦游戏 -->
+        <section class="py-16 bg-pmLight">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <h3 class="text-2xl font-bold text-pmDark mb-6">更多宝可梦游戏</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                        访问我们的游戏总站，发现更多精彩的宝可梦风格游戏
+                    </p>
+                    <a href="https://www.nnii.cn" 
+                       class="inline-flex items-center px-8 py-4 bg-pmDark text-white rounded-lg pm-btn-hover font-medium"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-gamepad mr-2 text-2xl"></i> 访问游戏总站
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section class="py-20 bg-gradient-to-b from-pmPrimary/5 to-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">立即下载游戏</h2>
+                <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+                    加入掌机小精灵的世界，开始你的精灵训练师之旅！
+                </p>
+                
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-lg text-xl mb-10 pm-btn-hover"
+                   target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-download mr-2"></i> 立即下载游戏
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-pmDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="https://img1.tucang.cc/api/image/show/02e379dede3763ea2498c81c94640f8d" 
+                         alt="掌机小精灵游戏图标" 
+                         class="h-12 w-12 rounded-lg mr-4 shadow-md">
+                    <h2 class="text-2xl font-bold">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h2>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-weibo"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-wechat"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-qq"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">快速链接</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首页</a></li>
+                            <li><a href="features.html" class="text-gray-300 hover:text-white transition-colors">游戏特色</a></li>
+                            <li><a href="guide.html" class="text-gray-300 hover:text-white transition-colors">游戏攻略</a></li>
+                            <li><a href="codes.html" class="text-gray-300 hover:text-white transition-colors">兑换码</a></li>
+                            <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors font-bold">联系我们</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">资源链接</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://p.3633yx.com/Y3uQRj" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">游戏下载</a></li>
+                            <li><a href="https://www.nnii.cn" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">更多宝可梦游戏</a></li>
+                            <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">官方QQ群</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">客服支持</h3>
+                        <p class="text-gray-300 mb-4">关注公众号"小茂爱游戏"获取专属客服支持</p>
+                        <p class="text-gray-300">工作时间：9:00-22:00</p>
+                    </div>
+                </div>
+                
+                <div class="text-center text-gray-400 text-sm pt-6 border-t border-white/10">
+                    <p class="mb-2">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。</p>
+                    <p class="mb-4">适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+                    <p>© 2023 掌机小精灵官网 版权所有 | 游戏备案号：XXXXXXXXXX</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 联系客服悬浮按钮 -->
+    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center">
+        <i class="fa fa-headphones mr-2"></i>
+        <span class="hidden sm:inline font-bold">联系客服</span>
+    </a>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('pm-header');
+            const backToTop = document.getElementById('pm-backToTop');
+            
+            if (window.scrollY > 150) {
+                header.classList.add('py-2', 'shadow-lg');
+                header.classList.remove('py-3', 'shadow-md');
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                header.classList.add('py-3', 'shadow-md');
+                header.classList.remove('py-2', 'shadow-lg');
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('pm-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('pm-mobile-menu');
+            const isOpen = !mobileMenu.classList.contains('opacity-0');
+            
+            if (isOpen) {
+                mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'z-50');
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0', 'z-50');
+            }
+        });
+        
+        // 返回顶部功能
+        document.getElementById('pm-backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    const mobileMenu = document.getElementById('pm-mobile-menu');
+                    mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                    mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'z-50');
+                    
+                    // 滚动到目标位置
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

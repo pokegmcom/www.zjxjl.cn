@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏特色 - 掌机小精灵官网</title>
+    <meta name="keywords" content="掌机小精灵游戏特色, 宝可梦手游特色, 精灵养成游戏特色">
+    <meta name="description" content="掌机小精灵游戏特色介绍，包含800+精灵收录、3D建模技术、经典玩法还原、Mega进化系统等核心特色">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pmPrimary: '#FF5C5C',
+                        pmSecondary: '#3B82F6',
+                        pmAccent: '#FBBF24',
+                        pmDark: '#1E293B',
+                        pmLight: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        pmSans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .pm-content-auto {
+                content-visibility: auto;
+            }
+            .pm-text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            }
+            .pm-btn-hover {
+                transition: all 0.3s ease;
+            }
+            .pm-btn-hover:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            .pm-card-hover {
+                transition: all 0.3s ease;
+            }
+            .pm-card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+            .pm-gradient-overlay {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+            }
+            .pm-glow {
+                box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+            }
+        }
+    </style>
+</head>
+<body class="bg-pmLight font-pmSans text-pmDark">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="pm-header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://img1.tucang.cc/api/image/show/02e379dede3763ea2498c81c94640f8d" 
+                     alt="掌机小精灵游戏图标" 
+                     class="h-10 w-10 rounded-lg shadow-md">
+                <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">首页</a>
+                <a href="features.html" class="text-pmPrimary hover:text-pmPrimary transition-colors font-medium font-bold">游戏特色</a>
+                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">游戏攻略</a>
+                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">兑换码</a>
+                <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">联系我们</a>
+                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">活动文章</a>
+                <a href="https://www.nnii.cn" class="text-pmDark hover:text-pmPrimary transition-colors font-medium" target="_blank" rel="noopener noreferrer">
+                    更多宝可梦游戏
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-3">
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md pm-btn-hover">
+                    立即下载
+                </a>
+                <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 invisible transition-all duration-300 z-[-1]" id="pm-mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">首页</a>
+                <a href="features.html" class="text-pmPrimary hover:text-pmPrimary transition-colors py-2 border-b border-gray-100 font-bold">游戏特色</a>
+                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">游戏攻略</a>
+                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">兑换码</a>
+                <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">联系我们</a>
+                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">活动文章</a>
+                <a href="https://www.nnii.cn" class="text-pmDark hover:text-pmPrimary transition-colors py-2" target="_blank" rel="noopener noreferrer">
+                    更多宝可梦游戏
+                </a>
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="text-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md">
+                    立即下载
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 英雄区域 -->
+        <section class="relative">
+            <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
+                <img src="https://img1.tucang.cc/api/image/show/b6d9bead1c00ff98181c45ae302d80d8" 
+                     alt="掌机小精灵游戏宣传图" 
+                     class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 pm-gradient-overlay"></div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-center">
+                    <h2 class="text-[clamp(2rem,6vw,3.5rem)] font-bold text-white pm-text-shadow mb-4">
+                        游戏特色
+                    </h2>
+                    <p class="text-[clamp(1rem,2.5vw,1.3rem)] text-white pm-text-shadow max-w-3xl mx-auto">
+                        探索掌机小精灵的核心特色，体验最纯正的宝可梦世界
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏特色卡片 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">核心特色</h2>
+                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        掌机小精灵带你重温经典宝可梦世界，体验最纯正的口袋妖怪养成冒险
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmPrimary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-pokeball text-2xl text-pmPrimary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">800+精灵收录</h3>
+                        <p class="text-gray-600 text-center">
+                            包含1至9世代所有口袋妖怪，共计800多种精灵，600多种技能以及上百种精灵特性
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmSecondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-cube text-2xl text-pmSecondary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">3D建模技术</h3>
+                        <p class="text-gray-600 text-center">
+                            采用全新的3D建模技术，精准再现掌机中的精灵形象和战斗场景，带来沉浸式体验
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmAccent/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-random text-2xl text-pmAccent"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">经典玩法还原</h3>
+                        <p class="text-gray-600 text-center">
+                            还原精灵捕捉、孵蛋、进化以及经典回合制战斗，包含属性相克等核心玩法
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmPrimary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-bolt text-2xl text-pmPrimary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">Mega进化系统</h3>
+                        <p class="text-gray-600 text-center">
+                            特色Mega进化系统，让你的精灵获得更强力量和全新形态，扭转战局
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmSecondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-trophy text-2xl text-pmSecondary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">多种竞技模式</h3>
+                        <p class="text-gray-600 text-center">
+                            竞技场、跨服赛、策略联赛、联盟之夜等多种竞技模式，考验你的实力与策略
+                        </p>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
+                        <div class="w-16 h-16 bg-pmAccent/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-shield text-2xl text-pmAccent"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">正版IP授权</h3>
+                        <p class="text-gray-600 text-center">
+                            获得宝可梦正版IP授权，原汁原味还原经典角色和场景，带给你纯正体验
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色详情 -->
+        <section class="py-16 bg-pmLight">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 800+精灵 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                        <div class="md:w-1/2">
+                            <img src="https://img1.tucang.cc/api/image/show/16cf95cf44c13fc8c1edc8dc8fcc5ad4" 
+                                 alt="掌机小精灵精灵收集界面" 
+                                 class="rounded-xl shadow-lg w-full h-auto">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                                <i class="fa fa-pokeball text-pmPrimary mr-3"></i> 800+精灵收录
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                掌机小精灵收录了从第一世代到第九世代的所有口袋妖怪，共计800多种精灵。每只精灵都有独特的属性、技能和特性，让你可以打造属于自己的专属精灵战队。
+                            </p>
+                            <p class="text-gray-600 mb-6">
+                                无论是经典的皮卡丘、妙蛙种子，还是最新世代的新精灵，你都能在游戏中找到并培养它们。通过捕捉、孵蛋、进化等方式，收集完整的精灵图鉴。
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">全世代精灵</span>
+                                <span class="bg-pmSecondary/10 text-pmSecondary text-xs px-3 py-1 rounded-full">600+技能</span>
+                                <span class="bg-pmAccent/10 text-pmAccent text-xs px-3 py-1 rounded-full">百种特性</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D建模 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-24">
+                        <div class="md:w-1/2">
+                            <img src="https://img1.tucang.cc/api/image/show/77c671bd30aaf8770af7e1a3cd077900" 
+                                 alt="掌机小精灵3D战斗场景" 
+                                 class="rounded-xl shadow-lg w-full h-auto">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                                <i class="fa fa-cube text-pmSecondary mr-3"></i> 3D建模技术
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                游戏采用全新的3D建模技术，精准再现掌机中的精灵形象和战斗场景。每个精灵都有精心设计的3D模型，动作流畅自然，战斗特效华丽震撼。
+                            </p>
+                            <p class="text-gray-600 mb-6">
+                                从精灵的细节纹理到战斗时的技能特效，都经过精心打磨，为你带来身临其境的游戏体验。无论是在野外冒险还是竞技场对战，都能感受到视觉上的冲击。
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">精细3D模型</span>
+                                <span class="bg-pmSecondary/10 text-pmSecondary text-xs px-3 py-1 rounded-full">流畅动画</span>
+                                <span class="bg-pmAccent/10 text-pmAccent text-xs px-3 py-1 rounded-full">华丽特效</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 经典玩法 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                        <div class="md:w-1/2">
+                            <img src="https://img1.tucang.cc/api/image/show/1c47860bf881ad81fe59980c3edc760a" 
+                                 alt="掌机小精灵经典玩法" 
+                                 class="rounded-xl shadow-lg w-full h-auto">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                                <i class="fa fa-random text-pmAccent mr-3"></i> 经典玩法还原
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                掌机小精灵完美还原了宝可梦系列的经典玩法，包括精灵捕捉、孵蛋、进化以及经典回合制战斗。你可以在野外遇到野生精灵，使用精灵球进行捕捉。
+                            </p>
+                            <p class="text-gray-600 mb-6">
+                                游戏保留了属性相克系统，让战斗更具策略性。你需要根据对手的属性选择合适的精灵和技能，才能在战斗中取得胜利。同时，游戏还加入了孵蛋系统，让你可以培育出更强的精灵。
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">精灵捕捉</span>
+                                <span class="bg-pmSecondary/10 text-pmSecondary text-xs px-3 py-1 rounded-full">孵蛋系统</span>
+                                <span class="bg-pmAccent/10 text-pmAccent text-xs px-3 py-1 rounded-full">属性相克</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mega进化 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-24">
+                        <div class="md:w-1/2">
+                            <img src="https://img1.tucang.cc/api/image/show/1645d6d8d32e5a0a5120e0bdb7473ac9" 
+                                 alt="掌机小精灵Mega进化" 
+                                 class="rounded-xl shadow-lg w-full h-auto">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                                <i class="fa fa-bolt text-pmPrimary mr-3"></i> Mega进化系统
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                掌机小精灵特色Mega进化系统，让你的精灵获得更强力量和全新形态。在战斗中，符合条件的精灵可以进行Mega进化，大幅提升各项能力值，甚至改变属性和特性。
+                            </p>
+                            <p class="text-gray-600 mb-6">
+                                Mega进化不仅能让精灵变得更加强大，还能在关键时刻扭转战局。不同的精灵Mega进化后会有不同的形态和能力提升，为战斗策略增添更多可能性。
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">Mega进化</span>
+                                <span class="bg-pmSecondary/10 text-pmSecondary text-xs px-3 py-1 rounded-full">能力提升</span>
+                                <span class="bg-pmAccent/10 text-pmAccent text-xs px-3 py-1 rounded-full">形态变化</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞技模式 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">多种竞技模式</h2>
+                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        挑战不同的竞技模式，展示你的精灵训练师实力
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pmPrimary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-trophy text-xl text-pmPrimary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-pmDark">竞技场</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            与其他训练师进行实时对战，提升自己的竞技场排名，获得丰厚奖励。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">每日开放</span>
+                            <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">PVP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pmSecondary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-globe text-xl text-pmSecondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-pmDark">跨服赛</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            与来自不同服务器的训练师竞争，争夺跨服排名，成为全服最强训练师。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">每周开放</span>
+                            <span class="bg-pmSecondary/10 text-pmSecondary text-xs px-3 py-1 rounded-full">跨服</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pmAccent/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-chess text-xl text-pmAccent"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-pmDark">策略联赛</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            考验你的精灵搭配和战斗策略，通过多轮对战晋级，获得稀有奖励。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">定期举办</span>
+                            <span class="bg-pmAccent/10 text-pmAccent text-xs px-3 py-1 rounded-full">策略</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pmPrimary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-moon-o text-xl text-pmPrimary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-pmDark">联盟之夜</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            每晚特定时间开放的限时活动，挑战强大的对手，获得专属奖励。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">每晚开放</span>
+                            <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-3 py-1 rounded-full">限时</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section class="py-20 bg-gradient-to-b from-pmPrimary/5 to-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">立即体验游戏特色</h2>
+                <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+                    加入掌机小精灵的世界，体验所有精彩特色，收集你的专属精灵战队！
+                </p>
+                
+                <a href="https://p.3633yx.com/Y3uQRj" 
+                   class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-lg text-xl mb-10 pm-btn-hover"
+                   target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-download mr-2"></i> 立即下载游戏
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-pmDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="https://img1.tucang.cc/api/image/show/02e379dede3763ea2498c81c94640f8d" 
+                         alt="掌机小精灵游戏图标" 
+                         class="h-12 w-12 rounded-lg mr-4 shadow-md">
+                    <h2 class="text-2xl font-bold">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h2>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-weibo"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-wechat"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
+                        <i class="fa fa-qq"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">快速链接</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首页</a></li>
+                            <li><a href="features.html" class="text-gray-300 hover:text-white transition-colors font-bold">游戏特色</a></li>
+                            <li><a href="guide.html" class="text-gray-300 hover:text-white transition-colors">游戏攻略</a></li>
+                            <li><a href="codes.html" class="text-gray-300 hover:text-white transition-colors">兑换码</a></li>
+                            <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors font-bold">联系我们</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">资源链接</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://p.3633yx.com/Y3uQRj" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">游戏下载</a></li>
+                            <li><a href="https://www.nnii.cn" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">更多宝可梦游戏</a></li>
+                            <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">官方QQ群</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">客服支持</h3>
+                        <p class="text-gray-300 mb-4">关注公众号"小茂爱游戏"获取专属客服支持</p>
+                        <p class="text-gray-300">工作时间：9:00-22:00</p>
+                    </div>
+                </div>
+                
+                <div class="text-center text-gray-400 text-sm pt-6 border-t border-white/10">
+                    <p class="mb-2">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。</p>
+                    <p class="mb-4">适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+                    <p>© 2023 掌机小精灵官网 版权所有 | 游戏备案号：XXXXXXXXXX</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 联系客服悬浮按钮 -->
+    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center">
+        <i class="fa fa-headphones mr-2"></i>
+        <span class="hidden sm:inline font-bold">联系客服</span>
+    </a>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('pm-header');
+            const backToTop = document.getElementById('pm-backToTop');
+            
+            if (window.scrollY > 150) {
+                header.classList.add('py-2', 'shadow-lg');
+                header.classList.remove('py-3', 'shadow-md');
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                header.classList.add('py-3', 'shadow-md');
+                header.classList.remove('py-2', 'shadow-lg');
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('pm-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('pm-mobile-menu');
+            const isOpen = !mobileMenu.classList.contains('opacity-0');
+            
+            if (isOpen) {
+                mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'z-50');
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0', 'z-50');
+            }
+        });
+        
+        // 返回顶部功能
+        document.getElementById('pm-backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    const mobileMenu = document.getElementById('pm-mobile-menu');
+                    mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
+                    mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'z-50');
+                    
+                    // 滚动到目标位置
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

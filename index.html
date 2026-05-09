@@ -121,7 +121,7 @@
         }
         
         .pm-card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .pm-card-hover:hover {
@@ -130,12 +130,21 @@
         }
         
         .pm-btn-hover {
-            transition: all 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
         .pm-btn-hover:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(255, 92, 92, 0.4);
+        }
+        
+        /* Respect user's motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
         
         .pm-btn-hover:active {
@@ -273,17 +282,17 @@
 <body class="bg-pmLight text-pmDark">
     
     <!-- Toast 通知 -->
-    <div id="pm-toast" class="pm-toast">
-        <i class="fas fa-check-circle mr-2"></i>
+    <div id="pm-toast" class="pm-toast" role="status" aria-live="polite" aria-atomic="true">
+        <i class="fas fa-check-circle mr-2" aria-hidden="true"></i>
         <span>已复制到剪贴板</span>
     </div>
     
     <!-- 图片查看器 Modal -->
-    <div id="pm-image-modal" class="pm-modal" onclick="closeImageModal()">
-        <button class="absolute top-4 right-4 text-white text-4xl hover:text-pmPrimary transition-colors" onclick="closeImageModal()">
-            <i class="fas fa-times"></i>
+    <div id="pm-image-modal" class="pm-modal" onclick="closeImageModal()" role="dialog" aria-modal="true" aria-label="图片查看器">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-pmPrimary transition-colors" onclick="closeImageModal()" aria-label="关闭图片查看器">
+            <i class="fas fa-times" aria-hidden="true"></i>
         </button>
-        <img id="pm-modal-image" src="" alt="查看大图" class="max-w-[90vw] max-h-[90vh] object-contain">
+        <img id="pm-modal-image" src="" alt="查看大图" class="max-w-[90vw] max-h-[90vh] object-contain" width="800" height="600">
     </div>
 
     <!-- 导航栏 -->
@@ -291,7 +300,7 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center max-w-7xl">
             <!-- Logo区域 -->
             <div class="flex items-center space-x-3">
-                <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="h-10 w-10 rounded-lg shadow-md pm-btn-hover">
+                <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="h-10 w-10 rounded-lg shadow-md pm-btn-hover" width="40" height="40">
                 <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">
                     掌机小精灵
                     <span class="text-xs bg-gradient-to-r from-pmAccent to-orange-400 text-white px-2 py-0.5 rounded ml-2 font-medium">官网</span>
@@ -330,11 +339,11 @@
             <div class="flex items-center space-x-3">
                 <a href="https://p.3633yx.com/Y3uQRj" 
                    class="hidden md:inline-flex items-center bg-gradient-to-r from-pmPrimary to-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg pm-btn-hover animate-pulse-glow">
-                    <i class="fas fa-download mr-2"></i>
+                    <i class="fas fa-download mr-2" aria-hidden="true"></i>
                     立即下载
                 </a>
-                <button class="lg:hidden text-pmDark text-2xl" id="pm-menu-toggle" aria-label="打开菜单">
-                    <i class="fas fa-bars"></i>
+                <button class="lg:hidden text-pmDark text-2xl" id="pm-menu-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="pm-mobile-menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -419,9 +428,9 @@
                 
                 <!-- 平台标签 -->
                 <div class="flex gap-6 justify-center items-center text-white/80 text-sm animate-slide-up" style="animation-delay: 0.6s;">
-                    <span><i class="fab fa-android text-green-400 mr-2"></i>Android 5.0+</span>
-                    <span><i class="fab fa-apple text-blue-400 mr-2"></i>iOS 10.0+</span>
-                    <span><i class="fas fa-gamepad text-yellow-400 mr-2"></i>免费游戏</span>
+                    <span><i class="fab fa-android text-green-400 mr-2" aria-hidden="true"></i>Android 5.0+</span>
+                    <span><i class="fab fa-apple text-blue-400 mr-2" aria-hidden="true"></i>iOS 10.0+</span>
+                    <span><i class="fas fa-gamepad text-yellow-400 mr-2" aria-hidden="true"></i>免费游戏</span>
                 </div>
                 
                 <!-- 滚动提示 -->
@@ -1032,12 +1041,12 @@
 
     <!-- 返回顶部按钮 -->
     <button id="pm-back-to-top" class="pm-back-to-top pm-floating-contact fixed bottom-8 right-8 bg-gradient-to-r from-pmPrimary to-red-600 text-white p-4 rounded-full shadow-2xl z-50 pm-btn-hover" onclick="scrollToTop()" aria-label="返回顶部">
-        <i class="fas fa-arrow-up text-xl"></i>
+        <i class="fas fa-arrow-up text-xl" aria-hidden="true"></i>
     </button>
 
     <!-- 联系客服悬浮按钮 -->
-    <a href="contact.html" class="pm-floating-contact fixed bottom-8 left-8 bg-gradient-to-r from-pmAccent to-yellow-400 text-pmDark p-4 rounded-full shadow-2xl z-50 pm-btn-hover flex items-center" style="animation-delay: 1s;">
-        <i class="fas fa-headphones mr-2 text-xl"></i>
+    <a href="contact.html" class="pm-floating-contact fixed bottom-8 left-8 bg-gradient-to-r from-pmAccent to-yellow-400 text-pmDark p-4 rounded-full shadow-2xl z-50 pm-btn-hover flex items-center touch-manipulation" style="animation-delay: 1s;">
+        <i class="fas fa-headphones mr-2 text-xl" aria-hidden="true"></i>
         <span class="hidden sm:inline font-bold">联系客服</span>
     </a>
 
@@ -1126,8 +1135,10 @@
             if (menuToggle && mobileMenu) {
                 menuToggle.addEventListener('click', () => {
                     mobileMenu.classList.toggle('active');
+                    const isExpanded = mobileMenu.classList.contains('active');
+                    menuToggle.setAttribute('aria-expanded', isExpanded);
                     const icon = menuToggle.querySelector('i');
-                    if (mobileMenu.classList.contains('active')) {
+                    if (isExpanded) {
                         icon.classList.remove('fa-bars');
                         icon.classList.add('fa-times');
                     } else {

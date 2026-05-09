@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>《掌机小精灵》官网 - 正版IP手游下载 | 900+精灵养成回合制游戏</title>
+    <title>《掌机小精灵》官网 - 正版IP手游下载 | 800+精灵养成回合制游戏</title>
     <meta name="keywords" content="掌机小精灵官网, 掌机小精灵, 宝可梦手游, 正版宝可梦IP, 精灵养成游戏, 回合制手游, 口袋妖怪游戏, 掌机小精灵下载">
     <meta name="description" content="掌机小精灵官网提供正版宝可梦IP授权手游下载，包含1-9世代800+精灵，3D建模还原经典玩法，支持捕捉、孵蛋、Mega进化，多种竞技模式等你来战！">
     <link rel="canonical" href="https://www.pocketmon.cn/index.html">
-    <meta property="og:title" content="《掌机小精灵》官网 - 正版IP手游下载 | 900+精灵养成回合制游戏">
+    <meta property="og:title" content="《掌机小精灵》官网 - 正版IP手游下载 | 800+精灵养成回合制游戏">
     <meta property="og:description" content="掌机小精灵官网提供正版宝可梦IP授权手游下载，包含1-9世代800+精灵，3D建模还原经典玩法，支持捕捉、孵蛋、Mega进化，多种竞技模式等你来战！">
     <meta property="og:image" content="img/screenshots/hero-banner.png">
     <meta property="og:type" content="website">
@@ -16,7 +16,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="《掌机小精灵》官网 - 正版IP手游下载">
     <meta name="twitter:description" content="正版宝可梦IP授权手游，800+精灵，3D建模还原经典玩法！">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+    <link rel="icon" type="image/png" href="img/icons/icon.png">
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,369 +47,896 @@
         ]
     }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <!-- Tailwind 配置 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwindcss.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         pmPrimary: '#FF5C5C',
+                        pmPrimaryDark: '#E64545',
                         pmSecondary: '#3B82F6',
+                        pmSecondaryDark: '#2563EB',
                         pmAccent: '#FBBF24',
                         pmDark: '#1E293B',
-                        pmLight: '#F8FAFC'
+                        pmLight: '#F8FAFC',
+                        pmGray: '#64748B',
+                        pmGrayLight: '#E2E8F0'
                     },
-                    fontFamily: {
-                        pmSans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'slide-up': 'slide-up 0.5s ease-out',
+                        'fade-in': 'fade-in 0.5s ease-out',
+                        'bounce-in': 'bounce-in 0.6s ease-out',
                     },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(255, 92, 92, 0.6)' },
+                            '50%': { boxShadow: '0 0 40px rgba(255, 92, 92, 0.9)' }
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        'bounce-in': {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
                 }
             }
         }
     </script>
     
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .pm-content-auto {
-                content-visibility: auto;
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+        
+        * {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        .pm-gradient-overlay {
+            background: linear-gradient(180deg, 
+                rgba(0,0,0,0.3) 0%, 
+                rgba(0,0,0,0.5) 50%, 
+                rgba(0,0,0,0.8) 100%);
+        }
+        
+        .pm-text-shadow {
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .pm-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pm-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pm-btn-hover {
+            transition: all 0.2s ease;
+        }
+        
+        .pm-btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 92, 92, 0.4);
+        }
+        
+        .pm-btn-hover:active {
+            transform: scale(0.95);
+        }
+        
+        .pm-hero-bg {
+            background: linear-gradient(135deg, #FF5C5C 0%, #3B82F6 50%, #FBBF24 100%);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .pm-pokeball {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #FF5C5C 0%, #FF5C5C 45%, #fff 45%, #fff 55%, #1E293B 55%, #1E293B 100%);
+            box-shadow: 0 4px 15px rgba(255, 92, 92, 0.3);
+        }
+        
+        .pm-pokeball::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            border: 4px solid #1E293B;
+        }
+        
+        .pm-scrollable-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .pm-scrollable-menu.active {
+            max-height: 500px;
+        }
+        
+        .pm-fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .pm-fade-in-up.visible {
+            animation: slide-up 0.6s ease-out forwards;
+        }
+        
+        .pm-code-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 2px dashed #FF5C5C;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .pm-toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: #10B981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+        
+        .pm-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .pm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9998;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .pm-modal.active {
+            display: flex;
+        }
+        
+        .pm-carousel-item {
+            transition: opacity 0.5s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .pm-back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .pm-back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .pm-floating-contact {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .pm-hero-title {
+                font-size: 2.5rem !important;
             }
-            .pm-text-shadow {
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            }
-            .pm-btn-hover {
-                transition: all 0.3s ease;
-            }
-            .pm-btn-hover:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            }
-            .pm-card-hover {
-                transition: all 0.3s ease;
-            }
-            .pm-card-hover:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            }
-            .pm-gradient-overlay {
-                background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
-            }
-            .pm-glow {
-                box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+            
+            .pm-hero-subtitle {
+                font-size: 1rem !important;
             }
         }
     </style>
 </head>
-<body class="bg-pmLight font-pmSans text-pmDark">
+<body class="bg-pmLight text-pmDark">
+    
+    <!-- Toast 通知 -->
+    <div id="pm-toast" class="pm-toast">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span>已复制到剪贴板</span>
+    </div>
+    
+    <!-- 图片查看器 Modal -->
+    <div id="pm-image-modal" class="pm-modal" onclick="closeImageModal()">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-pmPrimary transition-colors" onclick="closeImageModal()">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="pm-modal-image" src="" alt="查看大图" class="max-w-[90vw] max-h-[90vh] object-contain">
+    </div>
+
     <!-- 导航栏 -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="pm-header">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <header id="pm-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center max-w-7xl">
+            <!-- Logo区域 -->
             <div class="flex items-center space-x-3">
-                <img src="img/icons/icon.png" 
-                     alt="掌机小精灵游戏图标" 
-                     class="h-10 w-10 rounded-lg shadow-md">
-                <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h1>
+                <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="h-10 w-10 rounded-lg shadow-md pm-btn-hover">
+                <h1 class="text-xl md:text-2xl font-bold text-pmPrimary">
+                    掌机小精灵
+                    <span class="text-xs bg-gradient-to-r from-pmAccent to-orange-400 text-white px-2 py-0.5 rounded ml-2 font-medium">官网</span>
+                </h1>
             </div>
             
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">首页</a>
-                <a href="features.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">游戏特色</a>
-                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">游戏攻略</a>
-                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">兑换码</a>
-                <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">联系我们</a>
-                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors font-medium">活动文章</a>
+            <!-- 桌面端导航 -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    首页
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="features.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    游戏特色
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="guide.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    游戏攻略
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="codes.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    兑换码
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    联系我们
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="article.html" class="relative text-pmDark hover:text-pmPrimary transition-colors font-medium group">
+                    活动文章
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pmPrimary transition-all duration-300 group-hover:w-full"></span>
+                </a>
             </nav>
             
+            <!-- 下载按钮 -->
             <div class="flex items-center space-x-3">
                 <a href="https://p.3633yx.com/Y3uQRj" 
-                   class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md pm-btn-hover">
+                   class="hidden md:inline-flex items-center bg-gradient-to-r from-pmPrimary to-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg pm-btn-hover animate-pulse-glow">
+                    <i class="fas fa-download mr-2"></i>
                     立即下载
                 </a>
-                <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle">
-                    <i class="fa fa-bars"></i>
+                <button class="lg:hidden text-pmDark text-2xl" id="pm-menu-toggle" aria-label="打开菜单">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         
         <!-- 移动端菜单 -->
-        <div class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 invisible transition-all duration-300 z-[-1]" id="pm-mobile-menu">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">首页</a>
-                <a href="features.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">游戏特色</a>
-                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">游戏攻略</a>
-                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">兑换码</a>
-                <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">联系我们</a>
-                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">活动文章</a>
+        <div id="pm-mobile-menu" class="lg:hidden pm-scrollable-menu bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-home mr-3 text-pmPrimary"></i>首页
+                </a>
+                <a href="features.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-star mr-3 text-pmPrimary"></i>游戏特色
+                </a>
+                <a href="guide.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-book mr-3 text-pmPrimary"></i>游戏攻略
+                </a>
+                <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-gift mr-3 text-pmPrimary"></i>兑换码
+                </a>
+                <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-headset mr-3 text-pmPrimary"></i>联系我们
+                </a>
+                <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors py-3 border-b border-gray-100 font-medium">
+                    <i class="fas fa-newspaper mr-3 text-pmPrimary"></i>活动文章
+                </a>
                 <a href="https://p.3633yx.com/Y3uQRj" 
-                   class="text-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md">
-                    立即下载
+                   class="text-center bg-gradient-to-r from-pmPrimary to-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-md">
+                    <i class="fas fa-download mr-2"></i>
+                    立即下载游戏
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="pt-16">
         <!-- 英雄区域 -->
-        <section class="relative">
-            <div class="relative h-[85vh] min-h-[600px] overflow-hidden">
-                <img src="img/screenshots/hero-banner.png" 
-                     alt="掌机小精灵游戏宣传图，展示3D精灵战斗场景" 
-                     class="w-full h-full object-cover object-center">
-                <div class="absolute inset-0 pm-gradient-overlay"></div>
+        <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <!-- 背景层 -->
+            <div class="absolute inset-0 pm-hero-bg"></div>
+            <img src="img/screenshots/hero-banner.png" 
+                 alt="掌机小精灵游戏宣传图" 
+                 class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60">
+            <div class="absolute inset-0 pm-gradient-overlay"></div>
+            
+            <!-- 装饰元素 -->
+            <div class="absolute top-20 left-10 opacity-20 animate-float">
+                <div class="pm-pokeball" style="width: 40px; height: 40px;"></div>
+            </div>
+            <div class="absolute top-32 right-20 opacity-20 animate-float" style="animation-delay: 1s;">
+                <div class="pm-pokeball" style="width: 30px; height: 30px;"></div>
+            </div>
+            <div class="absolute bottom-40 left-20 opacity-20 animate-float" style="animation-delay: 2s;">
+                <div class="pm-pokeball" style="width: 35px; height: 35px;"></div>
+            </div>
+            
+            <!-- 内容层 -->
+            <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+                <!-- 主标题 -->
+                <h2 class="pm-hero-title text-[clamp(2.5rem,8vw,5rem)] font-black text-white pm-text-shadow mb-6 animate-slide-up">
+                    🎮 掌机小精灵
+                </h2>
                 
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-center">
-                    <h2 class="text-[clamp(2rem,6vw,4rem)] font-bold text-white pm-text-shadow mb-4">
-                        掌机小精灵
-                    </h2>
-                    <p class="text-[clamp(1rem,2.5vw,1.5rem)] text-white pm-text-shadow max-w-3xl mx-auto mb-8 md:mb-12">
-                        正版宝可梦IP授权手游，800+精灵，3D建模还原经典玩法，捕捉、孵蛋、Mega进化应有尽有！
-                    </p>
+                <!-- 副标题 -->
+                <p class="pm-hero-subtitle text-[clamp(1rem,3vw,1.8rem)] text-white/90 pm-text-shadow max-w-3xl mx-auto mb-8 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+                    正版宝可梦IP授权手游<br>
+                    <span class="text-pmAccent font-bold">800+精灵</span> · <span class="text-pmSecondary font-bold">3D建模</span> · <span class="text-pmPrimary font-bold">经典回合制</span>
+                </p>
+                
+                <!-- CTA按钮 -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-slide-up" style="animation-delay: 0.4s;">
                     <a href="https://p.3633yx.com/Y3uQRj" 
-                       class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg md:text-xl mb-6 pm-btn-hover"
-                       target="_blank" rel="noopener noreferrer">
-                        <i class="fa fa-download mr-2"></i> 立即下载游戏
+                       class="group inline-flex items-center bg-gradient-to-r from-pmPrimary to-red-600 text-white font-bold py-4 px-10 rounded-full shadow-2xl text-xl pm-btn-hover animate-pulse-glow">
+                        <i class="fas fa-download mr-3 group-hover:animate-bounce"></i>
+                        立即下载游戏
                     </a>
-                    <p class="text-white text-shadow text-sm md:text-base">支持安卓和iOS系统</p>
+                    <a href="features.html" 
+                       class="inline-flex items-center bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-10 rounded-full border-2 border-white/50 hover:bg-white/30 transition-all text-xl">
+                        <i class="fas fa-play mr-3"></i>
+                        了解更多
+                    </a>
+                </div>
+                
+                <!-- 平台标签 -->
+                <div class="flex gap-6 justify-center items-center text-white/80 text-sm animate-slide-up" style="animation-delay: 0.6s;">
+                    <span><i class="fab fa-android text-green-400 mr-2"></i>Android 5.0+</span>
+                    <span><i class="fab fa-apple text-blue-400 mr-2"></i>iOS 10.0+</span>
+                    <span><i class="fas fa-gamepad text-yellow-400 mr-2"></i>免费游戏</span>
+                </div>
+                
+                <!-- 滚动提示 -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <a href="#features" class="text-white/60 hover:text-white transition-colors">
+                        <i class="fas fa-chevron-down text-3xl"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- 游戏特色 -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">游戏特色</h2>
-                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+        <section id="features" class="py-20 bg-gradient-to-b from-white to-pmLight">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- 标题 -->
+                <div class="text-center mb-16 pm-fade-in-up">
+                    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-black text-pmDark mb-4">
+                        <i class="fas fa-fire text-pmPrimary mr-3"></i>
+                        游戏特色
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pmPrimary to-pmSecondary mx-auto mb-6 rounded-full"></div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
                         掌机小精灵带你重温经典宝可梦世界，体验最纯正的口袋妖怪养成冒险
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
-                        <div class="w-16 h-16 bg-pmPrimary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <i class="fa fa-pokeball text-2xl text-pmPrimary"></i>
+                <!-- 特色卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 卡片1 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-pmPrimary">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pmPrimary/10 to-red-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <div class="pm-pokeball"></div>
                         </div>
-                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">800+精灵收录</h3>
-                        <p class="text-gray-600 text-center">
-                            包含1至9世代所有口袋妖怪，共计800多种精灵，600多种技能以及上百种精灵特性
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">800+精灵收录</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            包含1至9世代所有口袋妖怪，共计800多种精灵，600多种技能以及上百种精灵特性，收集你的专属精灵图鉴！
                         </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-pmPrimary text-sm font-medium">
+                                <i class="fas fa-star mr-2"></i>持续更新中
+                            </span>
+                        </div>
                     </div>
                     
-                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
-                        <div class="w-16 h-16 bg-pmSecondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <i class="fa fa-cube text-2xl text-pmSecondary"></i>
+                    <!-- 卡片2 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-pmSecondary" style="animation-delay: 0.1s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pmSecondary/10 to-blue-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <i class="fas fa-cube text-4xl text-pmSecondary"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">3D建模技术</h3>
-                        <p class="text-gray-600 text-center">
-                            采用全新的3D建模技术，精准再现掌机中的精灵形象和战斗场景，带来沉浸式体验
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">3D建模技术</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            采用全新的3D建模技术，精准再现掌机中的精灵形象和战斗场景，带来沉浸式的视觉体验
                         </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-pmSecondary text-sm font-medium">
+                                <i class="fas fa-magic mr-2"></i>高品质画面
+                            </span>
+                        </div>
                     </div>
                     
-                    <div class="bg-pmLight rounded-xl p-8 shadow-md pm-card-hover">
-                        <div class="w-16 h-16 bg-pmAccent/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <i class="fa fa-random text-2xl text-pmAccent"></i>
+                    <!-- 卡片3 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-pmAccent" style="animation-delay: 0.2s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pmAccent/10 to-yellow-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <i class="fas fa-random text-4xl text-pmAccent"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pmDark mb-4 text-center">经典玩法还原</h3>
-                        <p class="text-gray-600 text-center">
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">经典玩法还原</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
                             还原精灵捕捉、孵蛋、进化以及经典回合制战斗，包含属性相克等核心玩法
                         </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-pmAccent text-sm font-medium">
+                                <i class="fas fa-gamepad mr-2"></i>原汁原味
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 卡片4 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-green-500" style="animation-delay: 0.3s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500/10 to-green-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <i class="fas fa-bolt text-4xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">Mega进化</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            支持Mega进化、Z招式等特殊进化形态，让你的精灵释放更强战斗力
+                        </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-green-500 text-sm font-medium">
+                                <i class="fas fa-rocket mr-2"></i>战力飙升
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 卡片5 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-purple-500" style="animation-delay: 0.4s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500/10 to-purple-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <i class="fas fa-trophy text-4xl text-purple-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">PVP竞技</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            多种竞技模式，实时对战、排名赛、公会战，与全球训练师一决高下
+                        </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-purple-500 text-sm font-medium">
+                                <i class="fas fa-globe mr-2"></i>全球对战
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 卡片6 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-8 shadow-lg pm-card-hover border-t-4 border-pink-500" style="animation-delay: 0.5s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-500/10 to-pink-100 rounded-2xl flex items-center justify-center mb-6 mx-auto pm-btn-hover">
+                            <i class="fas fa-users text-4xl text-pink-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-pmDark mb-4 text-center">社交互动</h3>
+                        <p class="text-gray-600 text-center leading-relaxed mb-4">
+                            丰富的社交系统，公会、好友、交易、协作任务，与训练师们一起冒险
+                        </p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center text-pink-500 text-sm font-medium">
+                                <i class="fas fa-heart mr-2"></i>社交乐园
+                            </span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="text-center mt-12">
-                    <a href="features.html" class="inline-block bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md pm-btn-hover">
+                <!-- 查看更多按钮 -->
+                <div class="text-center mt-12 pm-fade-in-up">
+                    <a href="features.html" class="inline-flex items-center bg-gradient-to-r from-pmPrimary to-red-600 text-white font-bold py-3 px-8 rounded-full shadow-lg pm-btn-hover text-lg">
+                        <i class="fas fa-star mr-2"></i>
                         查看更多特色
+                        <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- 游戏截图 -->
-        <section class="py-16 bg-pmLight">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">游戏截图</h2>
-                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+        <section class="py-20 bg-gradient-to-b from-pmLight to-white overflow-hidden">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- 标题 -->
+                <div class="text-center mb-12 pm-fade-in-up">
+                    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-black text-pmDark mb-4">
+                        <i class="fas fa-images text-pmSecondary mr-3"></i>
+                        游戏截图
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pmSecondary to-blue-400 mx-auto mb-6 rounded-full"></div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
                         探索掌机小精灵的精彩世界，体验3D精灵战斗的震撼视觉效果
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div class="rounded-xl overflow-hidden shadow-lg pm-card-hover group">
-                        <img src="img/screenshots/screenshot-1.png" 
-                             alt="掌机小精灵游戏截图：3D精灵战斗场景" 
-                             class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                <!-- 轮播容器 -->
+                <div class="relative pm-fade-in-up" id="pm-screenshot-carousel">
+                    <div class="overflow-hidden rounded-2xl shadow-2xl">
+                        <div class="relative" id="pm-carousel-track">
+                            <!-- 截图1 -->
+                            <div class="pm-carousel-item" data-index="0">
+                                <div class="relative group cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-1.png')">
+                                    <img src="img/screenshots/screenshot-1.png" 
+                                         alt="掌机小精灵游戏截图：3D精灵战斗场景" 
+                                         class="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-4">
+                                            <i class="fas fa-search-plus text-2xl text-pmPrimary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                        <h3 class="text-white font-bold text-lg">3D精灵战斗</h3>
+                                        <p class="text-white/80 text-sm">炫酷战斗特效，热血回合制对决</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 截图2 -->
+                            <div class="pm-carousel-item" data-index="1" style="display: none;">
+                                <div class="relative group cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-2.png')">
+                                    <img src="img/screenshots/screenshot-2.png" 
+                                         alt="掌机小精灵游戏截图：精灵收集界面" 
+                                         class="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-4">
+                                            <i class="fas fa-search-plus text-2xl text-pmPrimary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                        <h3 class="text-white font-bold text-lg">精灵收集</h3>
+                                        <p class="text-white/80 text-sm">800+精灵等你收集，打造专属图鉴</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 截图3 -->
+                            <div class="pm-carousel-item" data-index="2" style="display: none;">
+                                <div class="relative group cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-3.png')">
+                                    <img src="img/screenshots/screenshot-3.png" 
+                                         alt="掌机小精灵游戏截图：Mega进化效果" 
+                                         class="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-4">
+                                            <i class="fas fa-search-plus text-2xl text-pmPrimary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                        <h3 class="text-white font-bold text-lg">Mega进化</h3>
+                                        <p class="text-white/80 text-sm">释放精灵全部潜力，战力飙升</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rounded-xl overflow-hidden shadow-lg pm-card-hover group">
-                        <img src="img/screenshots/screenshot-2.png" 
-                             alt="掌机小精灵游戏截图：精灵收集界面" 
-                             class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-lg pm-card-hover group">
-                        <img src="img/screenshots/screenshot-3.png" 
-                             alt="掌机小精灵游戏截图：Mega进化效果" 
-                             class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                    
+                    <!-- 轮播控制 -->
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-pmDark w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110" onclick="changeSlide(-1)" aria-label="上一张">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-pmDark w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110" onclick="changeSlide(1)" aria-label="下一张">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- 指示器 -->
+                    <div class="flex justify-center gap-3 mt-6" id="pm-carousel-indicators">
+                        <button class="w-3 h-3 rounded-full bg-pmPrimary transition-all" data-index="0"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="2"></button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 兑换码区域 -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">专属兑换码</h2>
-                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+        <section class="py-20 bg-gradient-to-b from-white to-pmLight">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- 标题 -->
+                <div class="text-center mb-12 pm-fade-in-up">
+                    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-black text-pmDark mb-4">
+                        <i class="fas fa-gift text-pmAccent mr-3"></i>
+                        专属兑换码
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pmAccent to-yellow-400 mx-auto mb-6 rounded-full"></div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
                         输入以下兑换码，领取稀有精灵和丰厚游戏奖励，助力你的精灵训练师之旅
                     </p>
                 </div>
                 
-                <div class="max-w-5xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- 兑换码卡片 -->
-                        <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover border-l-4 border-pmPrimary">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="font-bold text-lg text-pmDark">请假王礼包</h3>
-                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-2 py-1 rounded-full">稀有</span>
-                            </div>
-                            <div class="bg-white p-3 rounded-lg font-mono text-center text-pmDark mb-3 border border-gray-200">
-                                qjw888
-                            </div>
-                            <p class="text-gray-600 text-sm">奖励：闪光请假王+金币*6w6</p>
+                <!-- 兑换码卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <!-- 兑换码1 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-6 shadow-lg pm-card-hover border-l-4 border-pmPrimary">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-bold text-lg text-pmDark flex items-center">
+                                <i class="fas fa-crown text-pmAccent mr-2"></i>
+                                请假王礼包
+                            </h3>
+                            <span class="bg-gradient-to-r from-pmPrimary to-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                                稀有
+                            </span>
                         </div>
-                        
-                        <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover border-l-4 border-pmPrimary">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="font-bold text-lg text-pmDark">妙蛙种子礼包</h3>
-                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-2 py-1 rounded-full">稀有</span>
-                            </div>
-                            <div class="bg-white p-3 rounded-lg font-mono text-center text-pmDark mb-3 border border-gray-200">
-                                ysl888
-                            </div>
-                            <p class="text-gray-600 text-sm">奖励：闪光妙蛙种子+金币*6w6</p>
+                        <div class="pm-code-box p-4 rounded-lg text-center text-xl font-bold text-pmDark mb-4 tracking-wider">
+                            qjw888
                         </div>
-                        
-                        <div class="bg-pmLight rounded-xl p-6 shadow-md pm-card-hover border-l-4 border-pmPrimary">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="font-bold text-lg text-pmDark">新手礼包</h3>
-                                <span class="bg-pmPrimary/10 text-pmPrimary text-xs px-2 py-1 rounded-full">通用</span>
-                            </div>
-                            <div class="bg-white p-3 rounded-lg font-mono text-center text-pmDark mb-3 border border-gray-200">
-                                zjxjl
-                            </div>
-                            <p class="text-gray-600 text-sm">奖励：扭蛋币*10+金币*8w8+钻石*288</p>
-                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            <i class="fas fa-present text-pmAccent mr-1"></i>
+                            奖励：闪光请假王 + 金币*66000
+                        </p>
+                        <button onclick="copyCode('qjw888')" class="w-full bg-gradient-to-r from-pmPrimary to-red-600 text-white font-bold py-2 px-4 rounded-lg pm-btn-hover">
+                            <i class="fas fa-copy mr-2"></i>
+                            复制兑换码
+                        </button>
                     </div>
                     
-                    <div class="mt-12 text-center">
-                        <a href="codes.html" class="inline-block bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md pm-btn-hover">
-                            查看更多兑换码
-                        </a>
+                    <!-- 兑换码2 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-6 shadow-lg pm-card-hover border-l-4 border-pmSecondary" style="animation-delay: 0.1s;">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-bold text-lg text-pmDark flex items-center">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                妙蛙种子礼包
+                            </h3>
+                            <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs px-3 py-1 rounded-full font-medium">
+                                稀有
+                            </span>
+                        </div>
+                        <div class="pm-code-box p-4 rounded-lg text-center text-xl font-bold text-pmDark mb-4 tracking-wider">
+                            ysl888
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            <i class="fas fa-present text-green-500 mr-1"></i>
+                            奖励：闪光妙蛙种子 + 金币*66000
+                        </p>
+                        <button onclick="copyCode('ysl888')" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-2 px-4 rounded-lg pm-btn-hover">
+                            <i class="fas fa-copy mr-2"></i>
+                            复制兑换码
+                        </button>
                     </div>
+                    
+                    <!-- 兑换码3 -->
+                    <div class="pm-fade-in-up bg-white rounded-2xl p-6 shadow-lg pm-card-hover border-l-4 border-pmAccent" style="animation-delay: 0.2s;">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-bold text-lg text-pmDark flex items-center">
+                                <i class="fas fa-star text-pmAccent mr-2"></i>
+                                新手礼包
+                            </h3>
+                            <span class="bg-gradient-to-r from-pmAccent to-yellow-400 text-white text-xs px-3 py-1 rounded-full font-medium">
+                                通用
+                            </span>
+                        </div>
+                        <div class="pm-code-box p-4 rounded-lg text-center text-xl font-bold text-pmDark mb-4 tracking-wider">
+                            zjxjl
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            <i class="fas fa-present text-pmAccent mr-1"></i>
+                            奖励：扭蛋币*10 + 金币*88000 + 钻石*288
+                        </p>
+                        <button onclick="copyCode('zjxjl')" class="w-full bg-gradient-to-r from-pmAccent to-yellow-400 text-white font-bold py-2 px-4 rounded-lg pm-btn-hover">
+                            <i class="fas fa-copy mr-2"></i>
+                            复制兑换码
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 查看更多 -->
+                <div class="text-center pm-fade-in-up">
+                    <a href="codes.html" class="inline-flex items-center bg-gradient-to-r from-pmAccent to-yellow-400 text-white font-bold py-3 px-8 rounded-full shadow-lg pm-btn-hover text-lg">
+                        <i class="fas fa-gift mr-2"></i>
+                        查看更多兑换码
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- 下载区域 -->
-        <section class="py-20 bg-gradient-to-b from-pmPrimary/5 to-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">立即下载游戏</h2>
-                <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
-                    加入掌机小精灵的世界，收集你的专属精灵战队，开启精彩的宝可梦冒险之旅！
-                </p>
+        <section class="py-20 bg-gradient-to-b from-pmLight via-white to-gradient-to-r from-pmPrimary/5 to-pmSecondary/5">
+            <div class="container mx-auto px-4 max-w-7xl text-center">
+                <!-- 标题 -->
+                <div class="mb-12 pm-fade-in-up">
+                    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-black text-pmDark mb-4">
+                        <i class="fas fa-download text-pmPrimary mr-3"></i>
+                        立即下载游戏
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pmPrimary to-pmSecondary mx-auto mb-6 rounded-full"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        加入掌机小精灵的世界，收集你的专属精灵战队，开启精彩的宝可梦冒险之旅！
+                    </p>
+                </div>
                 
-                <a href="https://p.3633yx.com/Y3uQRj" 
-                   class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-lg text-xl mb-10 pm-btn-hover"
-                   target="_blank" rel="noopener noreferrer">
-                    <i class="fa fa-download mr-2"></i> 点击下载游戏
-                </a>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                    <div class="bg-white p-8 rounded-xl shadow-md pm-card-hover flex flex-col items-center">
-                        <div class="text-5xl text-pmPrimary mb-6">
-                            <i class="fa fa-android"></i>
+                <!-- 主下载按钮 -->
+                <div class="mb-12 pm-fade-in-up">
+                    <a href="https://p.3633yx.com/Y3uQRj" 
+                       class="inline-flex items-center bg-gradient-to-r from-pmPrimary via-red-500 to-pmSecondary text-white font-black py-5 px-12 rounded-full shadow-2xl text-2xl pm-btn-hover animate-pulse-glow">
+                        <i class="fas fa-download mr-4 text-3xl"></i>
+                        <div class="text-left">
+                            <div class="text-sm font-normal opacity-90">点击下载</div>
+                            <div>掌机小精灵</div>
                         </div>
-                        <h3 class="font-bold text-xl text-pmDark mb-3">安卓版</h3>
-                        <p class="text-gray-600 text-center mb-6">适用于Android 5.0及以上系统</p>
+                    </a>
+                </div>
+                
+                <!-- 平台卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                    <!-- Android -->
+                    <div class="pm-fade-in-up bg-white p-8 rounded-2xl shadow-lg pm-card-hover">
+                        <div class="text-6xl text-green-500 mb-4">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-pmDark mb-3">安卓版</h3>
+                        <p class="text-gray-600 mb-6">适用于Android 5.0及以上系统</p>
                         <a href="https://p.3633yx.com/Y3uQRj" 
-                           class="px-6 py-3 bg-pmPrimary/10 text-pmPrimary rounded-full pm-btn-hover font-medium"
-                           target="_blank" rel="noopener noreferrer">
+                           class="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 px-8 rounded-full pm-btn-hover">
+                            <i class="fab fa-android mr-2 text-xl"></i>
                             下载安卓客户端
                         </a>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-xl shadow-md pm-card-hover flex flex-col items-center">
-                        <div class="text-5xl text-pmPrimary mb-6">
-                            <i class="fa fa-apple"></i>
+                    <!-- iOS -->
+                    <div class="pm-fade-in-up bg-white p-8 rounded-2xl shadow-lg pm-card-hover" style="animation-delay: 0.1s;">
+                        <div class="text-6xl text-blue-500 mb-4">
+                            <i class="fab fa-apple"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-pmDark mb-3">iOS版</h3>
-                        <p class="text-gray-600 text-center mb-6">适用于iOS 10.0及以上系统</p>
+                        <h3 class="font-bold text-2xl text-pmDark mb-3">iOS版</h3>
+                        <p class="text-gray-600 mb-6">适用于iOS 10.0及以上系统</p>
                         <a href="https://p.3633yx.com/Y3uQRj" 
-                           class="px-6 py-3 bg-pmPrimary/10 text-pmPrimary rounded-full pm-btn-hover font-medium"
-                           target="_blank" rel="noopener noreferrer">
+                           class="inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-3 px-8 rounded-full pm-btn-hover">
+                            <i class="fab fa-apple mr-2 text-xl"></i>
                             下载iOS客户端
                         </a>
                     </div>
+                </div>
+                
+                <!-- 游戏信息 -->
+                <div class="pm-fade-in-up flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+                    <span class="flex items-center">
+                        <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                        安全无病毒
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-clock text-blue-500 mr-2"></i>
+                        7×24小时客服
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-gift text-pmAccent mr-2"></i>
+                        新手礼包赠送
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-wifi text-purple-500 mr-2"></i>
+                        省流量优化
+                    </span>
                 </div>
             </div>
         </section>
 
         <!-- 联系我们 -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-pmDark mb-4">联系我们</h2>
-                    <div class="w-24 h-1 bg-pmPrimary mx-auto mb-8"></div>
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- 标题 -->
+                <div class="text-center mb-12 pm-fade-in-up">
+                    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-black text-pmDark mb-4">
+                        <i class="fas fa-headset text-pmSecondary mr-3"></i>
+                        联系我们
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pmSecondary to-blue-400 mx-auto mb-6 rounded-full"></div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                        加入我们的社群，获取最新游戏资讯、活动信息和专属客服礼包
+                        加入我们的社群，获取最新游戏资讯、活动信息和专属客服支持
                     </p>
                 </div>
                 
-                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="bg-pmLight rounded-xl p-8 shadow-xl border-2 border-pmPrimary/30 mb-8">
-                            <h3 class="text-xl font-bold text-pmDark mb-6 flex items-center">
-                                <i class="fa fa-qq text-pmPrimary mr-3 text-2xl"></i> 官方QQ群
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- QQ群 -->
+                    <div class="pm-fade-in-up">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg border-2 border-blue-200">
+                            <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
+                                <i class="fab fa-qq text-blue-500 mr-3 text-3xl"></i>
+                                官方QQ群
                             </h3>
-                            <div class="flex items-center mb-4">
-                                <span class="text-gray-600 w-20">群号：</span>
-                                <span class="font-bold text-pmDark">1028266021</span>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 w-20 font-medium">群号：</span>
+                                    <span class="font-bold text-xl text-pmDark">1028266021</span>
+                                    <button onclick="copyCode('1028266021')" class="ml-4 text-pmPrimary hover:text-pmPrimaryDark transition-colors">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <p class="text-gray-600">加入QQ群，与其他训练师交流，获取最新活动信息和游戏攻略</p>
                             </div>
-                            <p class="text-gray-600 mb-6">加入QQ群，与其他训练家交流，获取最新活动信息和游戏攻略</p>
                             <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" 
-                               class="inline-flex items-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md w-full justify-center pm-btn-hover"
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-link mr-2"></i> 立即加入QQ群
+                               class="inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-3 px-8 rounded-full w-full justify-center pm-btn-hover">
+                                <i class="fas fa-link mr-2"></i>
+                                立即加入QQ群
                             </a>
                         </div>
                     </div>
                     
-                    <div class="flex justify-center">
-                        <div class="bg-white p-8 rounded-xl shadow-2xl border-4 border-pmPrimary text-center max-w-xs">
-                            <div class="inline-block p-3 bg-pmPrimary/10 rounded-full mb-6">
-                                <i class="fa fa-weixin text-4xl text-pmPrimary"></i>
+                    <!-- 公众号 -->
+                    <div class="pm-fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg border-2 border-green-200 text-center">
+                            <div class="inline-block p-4 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full mb-6">
+                                <i class="fab fa-weixin text-5xl text-green-500"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-pmDark mb-4">官方公众号</h3>
-                            <p class="text-gray-600 mb-6 font-medium">小茂爱手游</p>
-                            <p class="text-gray-600 mb-6">扫码关注获取最新兑换码、游戏资讯和专属客服礼包</p>
-                            <div class="bg-white p-4 rounded-lg inline-block shadow-md mb-6 border-2 border-gray-200">
+                            <h3 class="text-2xl font-bold text-pmDark mb-3">官方公众号</h3>
+                            <p class="text-pmPrimary font-bold text-lg mb-4">小茂爱手游</p>
+                            <p class="text-gray-600 mb-6">扫码关注获取最新兑换码、游戏资讯和专属客服支持</p>
+                            
+                            <!-- 二维码 -->
+                            <div class="bg-white p-4 rounded-xl inline-block shadow-md mb-6 border-2 border-gray-200 cursor-pointer hover:shadow-lg transition-shadow" onclick="openImageModal('img/qr/official-qr.png')">
                                 <img src="img/qr/official-qr.png" 
                                      alt="掌机小精灵官方公众号二维码：小茂爱手游" 
                                      class="w-64 h-64 object-contain">
                             </div>
-                            <p class="text-pmPrimary font-bold text-sm">回复【客服】获取专属礼包</p>
+                            
+                            <p class="text-pmPrimary font-bold text-sm">
+                                <i class="fas fa-mobile-alt mr-2"></i>
+                                微信扫一扫关注
+                            </p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="text-center mt-12">
-                    <a href="contact.html" class="inline-block bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md pm-btn-hover">
+                <!-- 其他联系方式 -->
+                <div class="mt-12 pm-fade-in-up">
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold text-pmDark mb-6 text-center">
+                            <i class="fas fa-comments text-purple-500 mr-2"></i>
+                            更多联系方式
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-comments text-2xl text-blue-500"></i>
+                                </div>
+                                <h4 class="font-bold text-pmDark mb-2">在线客服</h4>
+                                <p class="text-gray-600 text-sm">关注公众号"小茂爱手游"，右下角客服按钮获取支持</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-clock text-2xl text-green-500"></i>
+                                </div>
+                                <h4 class="font-bold text-pmDark mb-2">服务时间</h4>
+                                <p class="text-gray-600 text-sm">全天24小时在线<br>客服团队快速响应</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-question-circle text-2xl text-purple-500"></i>
+                                </div>
+                                <h4 class="font-bold text-pmDark mb-2">常见问题</h4>
+                                <p class="text-gray-600 text-sm">查看FAQ文档<br>快速解决常见问题</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 查看更多 -->
+                <div class="text-center mt-12 pm-fade-in-up">
+                    <a href="contact.html" class="inline-flex items-center bg-gradient-to-r from-pmSecondary to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg pm-btn-hover text-lg">
+                        <i class="fas fa-envelope mr-2"></i>
                         查看更多联系方式
+                        <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -416,127 +944,285 @@
     </main>
 
     <!-- 页脚 -->
-    <footer class="bg-pmDark text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
-                <div class="flex items-center mb-6 md:mb-0">
-                    <img src="img/icons/icon.png" 
-                         alt="掌机小精灵游戏图标" 
-                         class="h-12 w-12 rounded-lg mr-4 shadow-md">
-                    <h2 class="text-2xl font-bold">掌机小精灵<span class="text-sm bg-pmAccent text-pmDark px-2 py-0.5 rounded ml-2">官网</span></h2>
+    <footer class="bg-gradient-to-b from-pmDark to-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <!-- 主要内容 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Logo和描述 -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="h-14 w-14 rounded-lg mr-4 shadow-md">
+                        <div>
+                            <h2 class="text-2xl font-bold">掌机小精灵</h2>
+                            <span class="text-xs bg-gradient-to-r from-pmAccent to-yellow-400 text-white px-2 py-0.5 rounded font-medium">官网</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        正版宝可梦IP授权手游，包含1-9世代800+精灵，3D建模还原经典玩法，支持捕捉、孵蛋、Mega进化等多种特色玩法。
+                    </p>
+                    <!-- 社交媒体 -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-pmPrimary rounded-full flex items-center justify-center transition-all hover:scale-110" title="微博">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-green-500 rounded-full flex items-center justify-center transition-all hover:scale-110" title="微信">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-blue-500 rounded-full flex items-center justify-center transition-all hover:scale-110" title="QQ群">
+                            <i class="fab fa-qq"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="flex space-x-6">
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-weibo"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-wechat"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-pmPrimary transition-colors text-xl">
-                        <i class="fa fa-qq"></i>
-                    </a>
+                <!-- 快速链接 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-pmAccent">
+                        <i class="fas fa-link mr-2"></i>快速链接
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="features.html" class="text-gray-300 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="guide.html" class="text-gray-300 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-300 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="article.html" class="text-gray-300 hover:text-white transition-colors">活动文章</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 法律信息 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-pmAccent">
+                        <i class="fas fa-balance-scale mr-2"></i>法律信息
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">隐私政策</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">用户协议</a></li>
+                        <li><a href="sitemap.html" class="text-gray-300 hover:text-white transition-colors">网站地图</a></li>
+                    </ul>
+                    <div class="mt-6">
+                        <h3 class="text-lg font-bold mb-4 text-pmAccent">
+                            <i class="fas fa-download mr-2"></i>资源下载
+                        </h3>
+                        <a href="https://p.3633yx.com/Y3uQRj" class="inline-flex items-center bg-gradient-to-r from-pmPrimary to-red-600 text-white font-bold py-2 px-4 rounded-lg pm-btn-hover text-sm">
+                            <i class="fas fa-gamepad mr-2"></i>
+                            游戏下载
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-white/20 pt-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    <div>
-                        <h3 class="text-lg font-bold mb-4 text-pmAccent">快速链接</h3>
-                        <ul class="space-y-2">
-                            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首页</a></li>
-                            <li><a href="features.html" class="text-gray-300 hover:text-white transition-colors">游戏特色</a></li>
-                            <li><a href="guide.html" class="text-gray-300 hover:text-white transition-colors">游戏攻略</a></li>
-                            <li><a href="codes.html" class="text-gray-300 hover:text-white transition-colors">兑换码</a></li>
-                            <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
-                            <li><a href="article.html" class="text-gray-300 hover:text-white transition-colors">活动文章</a></li>
-                            <li><a href="sitemap.html" class="text-gray-300 hover:text-white transition-colors">网站地图</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-bold mb-4 text-pmAccent">法律信息</h3>
-                        <ul class="space-y-2">
-                            <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">隐私政策</a></li>
-                            <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">用户协议</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-bold mb-4 text-pmAccent">资源链接</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://p.3633yx.com/Y3uQRj" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">游戏下载</a></li>
-                            <li><a href="https://www.nnii.cn" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">更多宝可梦游戏</a></li>
-                            <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" class="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">官方QQ群</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-bold mb-4 text-pmAccent">客服支持</h3>
-                        <p class="text-gray-300 mb-4">关注公众号"小茂爱手游"获取专属客服支持</p>
-                        <p class="text-gray-300">工作时间：9:00-22:00</p>
-                    </div>
-                </div>
-                
-                <div class="text-center text-gray-400 text-sm pt-6 border-t border-white/10">
-                    <p class="mb-2">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。</p>
-                    <p class="mb-4">适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
-                    <p>© 2026 掌机小精灵官网 版权所有 | <a href="privacy.html" class="hover:text-white">隐私政策</a> | <a href="terms.html" class="hover:text-white">用户协议</a> | 游戏备案号：XXXXXXXXXX</p>
+            <!-- 分隔线 -->
+            <div class="border-t border-white/10 pt-8">
+                <!-- 提示信息 -->
+                <div class="bg-white/5 rounded-xl p-6 mb-8">
+                    <p class="text-gray-300 text-sm text-center leading-relaxed mb-2">
+                        <i class="fas fa-exclamation-triangle text-pmAccent mr-2"></i>
+                        抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。
+                    </p>
+                    <p class="text-gray-300 text-sm text-center leading-relaxed mb-2">
+                        适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+                    </p>
+                    <p class="text-gray-400 text-xs text-center mt-4">
+                        © 2026 掌机小精灵官网 版权所有 | 游戏备案号：XXXXXXXXXX
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- 返回顶部按钮 -->
-    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
-        <i class="fa fa-arrow-up"></i>
+    <button id="pm-back-to-top" class="pm-back-to-top pm-floating-contact fixed bottom-8 right-8 bg-gradient-to-r from-pmPrimary to-red-600 text-white p-4 rounded-full shadow-2xl z-50 pm-btn-hover" onclick="scrollToTop()" aria-label="返回顶部">
+        <i class="fas fa-arrow-up text-xl"></i>
     </button>
 
     <!-- 联系客服悬浮按钮 -->
-    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center">
-        <i class="fa fa-headphones mr-2"></i>
+    <a href="contact.html" class="pm-floating-contact fixed bottom-8 left-8 bg-gradient-to-r from-pmAccent to-yellow-400 text-pmDark p-4 rounded-full shadow-2xl z-50 pm-btn-hover flex items-center" style="animation-delay: 1s;">
+        <i class="fas fa-headphones mr-2 text-xl"></i>
         <span class="hidden sm:inline font-bold">联系客服</span>
     </a>
 
+    <!-- JavaScript -->
     <script>
-        // 导航栏滚动效果
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('pm-header');
-            const backToTop = document.getElementById('pm-backToTop');
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化滚动动画
+            initScrollAnimations();
             
-            if (window.scrollY > 150) {
-                header.classList.add('py-2', 'shadow-lg');
-                header.classList.remove('py-3', 'shadow-md');
-                backToTop.classList.remove('opacity-0', 'invisible');
-                backToTop.classList.add('opacity-100', 'visible');
-            } else {
-                header.classList.add('py-3', 'shadow-md');
-                header.classList.remove('py-2', 'shadow-lg');
-                backToTop.classList.add('opacity-0', 'invisible');
-                backToTop.classList.remove('opacity-100', 'visible');
-            }
+            // 初始化轮播
+            initCarousel();
+            
+            // 初始化导航栏
+            initNavigation();
+            
+            // 初始化返回顶部
+            initBackToTop();
         });
         
-        // 移动端菜单切换
-        document.getElementById('pm-menu-toggle').addEventListener('click', function() {
+        // 滚动动画
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            document.querySelectorAll('.pm-fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // 轮播功能
+        let currentSlide = 0;
+        let carouselInterval;
+        const totalSlides = 3;
+        
+        function initCarousel() {
+            startAutoPlay();
+            
+            // 鼠标悬停暂停
+            const carousel = document.getElementById('pm-screenshot-carousel');
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopAutoPlay);
+                carousel.addEventListener('mouseleave', startAutoPlay);
+            }
+        }
+        
+        function changeSlide(direction) {
+            const items = document.querySelectorAll('.pm-carousel-item');
+            const indicators = document.querySelectorAll('#pm-carousel-indicators button');
+            
+            // 隐藏当前
+            items[currentSlide].style.display = 'none';
+            indicators[currentSlide].classList.remove('bg-pmPrimary');
+            indicators[currentSlide].classList.add('bg-gray-300');
+            
+            // 计算下一个
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            
+            // 显示下一个
+            items[currentSlide].style.display = 'block';
+            indicators[currentSlide].classList.remove('bg-gray-300');
+            indicators[currentSlide].classList.add('bg-pmPrimary');
+        }
+        
+        function startAutoPlay() {
+            carouselInterval = setInterval(() => changeSlide(1), 5000);
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(carouselInterval);
+        }
+        
+        // 导航栏
+        function initNavigation() {
+            const menuToggle = document.getElementById('pm-menu-toggle');
             const mobileMenu = document.getElementById('pm-mobile-menu');
-            const isOpen = !mobileMenu.classList.contains('opacity-0');
             
-            if (isOpen) {
-                mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
-                mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'z-50');
-            } else {
-                mobileMenu.classList.remove('opacity-0', 'invisible', '-translate-y-full', 'z-[-1]');
-                mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0', 'z-50');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    if (mobileMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
             }
-        });
+            
+            // 滚动效果
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('pm-header');
+                if (window.scrollY > 150) {
+                    header.classList.add('shadow-lg', 'py-2');
+                    header.classList.remove('py-3');
+                } else {
+                    header.classList.remove('shadow-lg', 'py-2');
+                    header.classList.add('py-3');
+                }
+            });
+        }
         
-        // 返回顶部功能
-        document.getElementById('pm-backToTop').addEventListener('click', function() {
+        // 返回顶部
+        function initBackToTop() {
+            const backToTop = document.getElementById('pm-back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+        }
+        
+        function scrollToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
+        }
+        
+        // 复制功能
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                showToast('已复制到剪贴板：' + code);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                showToast('复制失败，请手动复制', 'error');
+            });
+        }
+        
+        // Toast提示
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('pm-toast');
+            const span = toast.querySelector('span');
+            const icon = toast.querySelector('i');
+            
+            span.textContent = message;
+            if (type === 'error') {
+                toast.style.background = '#EF4444';
+                icon.className = 'fas fa-exclamation-circle mr-2';
+            } else {
+                toast.style.background = '#10B981';
+                icon.className = 'fas fa-check-circle mr-2';
+            }
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // 图片查看器
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('pm-image-modal');
+            const img = document.getElementById('pm-modal-image');
+            
+            img.src = imageSrc;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('pm-image-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // ESC关闭模态框
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
         });
     </script>
 </body>

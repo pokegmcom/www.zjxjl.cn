@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏特色 - 掌机小精灵官网</title>
+    <meta name="keywords" content="掌机小精灵游戏特色, 宝可梦手游特色, 精灵养成游戏特色">
+    <meta name="description" content="掌机小精灵游戏特色介绍，包含800+精灵收录、3D建模技术、经典玩法还原、Mega进化系统等核心特色">
+    <link rel="canonical" href="https://www.zjxjl.cn/features.html">
+    <meta property="og:title" content="游戏特色 - 掌机小精灵官网">
+    <meta property="og:description" content="掌机小精灵游戏特色介绍，包含800+精灵收录、3D建模技术、经典玩法还原、Mega进化系统等核心特色">
+    <meta property="og:image" content="img/screenshots/hero-banner.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zjxjl.cn/features.html">
+    <meta property="og:site_name" content="掌机小精灵官网">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="游戏特色 - 掌机小精灵官网">
+    <meta name="twitter:description" content="包含800+精灵收录、3D建模技术、经典玩法还原、Mega进化系统等核心特色">
+    <link rel="icon" type="image/png" href="img/icons/icon.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "掌机小精灵 - 游戏特色",
+        "description": "掌机小精灵游戏特色介绍，包含800+精灵收录、3D建模技术、经典玩法还原、Mega进化系统等核心特色",
+        "url": "https://www.zjxjl.cn/features.html"
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Toast 通知 -->
+    <div id="pm-toast" class="pm-toast" role="status" aria-live="polite" aria-atomic="true">
+        <i class="fas fa-check-circle me-2" aria-hidden="true"></i>
+        <span>已复制到剪贴板</span>
+    </div>
+
+    <!-- 图片查看器 Modal -->
+    <div id="pm-image-modal" class="pm-modal" onclick="closeImageModal()" role="dialog" aria-modal="true" aria-label="图片查看器">
+        <button class="pm-modal-close" onclick="closeImageModal()" aria-label="关闭图片查看器">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <img id="pm-modal-image" src="" alt="查看大图" width="800" height="600">
+    </div>
+
+    <!-- 导航栏 -->
+    <header id="pm-header" class="pm-header">
+        <div class="pm-container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                    <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="rounded-3 shadow-sm" width="40" height="40">
+                    <div>
+                        <span class="fs-4 fw-bold" style="color: var(--pm-primary);">掌机小精灵</span>
+                        <span class="badge ms-1" style="background: linear-gradient(135deg, var(--pm-accent), #f59e0b);">官网</span>
+                    </div>
+                </a>
+
+                <nav class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="index.html" class="pm-nav-link">首页</a>
+                    <a href="features.html" class="pm-nav-link active">游戏特色</a>
+                    <a href="guide.html" class="pm-nav-link">游戏攻略</a>
+                    <a href="codes.html" class="pm-nav-link">兑换码</a>
+                    <a href="contact.html" class="pm-nav-link">联系我们</a>
+                    <a href="articles.html" class="pm-nav-link">活动文章</a>
+                </nav>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="https://p.3633yx.com/Y3uQRj" class="pm-btn-primary d-none d-md-flex" style="padding: 0.6rem 1.5rem; font-size: 1rem;">
+                        <i class="fas fa-download me-2" aria-hidden="true"></i>
+                        立即下载
+                    </a>
+                    <button class="btn btn-link d-lg-none p-2" id="pm-menu-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="pm-mobile-menu" style="color: var(--pm-dark); font-size: 1.5rem;">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pm-mobile-menu" class="pm-mobile-menu d-lg-none border-top" style="background: white;">
+            <div class="pm-container py-3 d-flex flex-column gap-2">
+                <a href="index.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none" style="color: var(--pm-dark); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-home" style="width: 24px; text-align: center; color: var(--pm-primary);"></i>首页
+                </a>
+                <a href="features.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none fw-bold" style="color: var(--pm-primary); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-star" style="width: 24px; text-align: center;"></i>游戏特色
+                </a>
+                <a href="guide.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none" style="color: var(--pm-dark); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-book" style="width: 24px; text-align: center; color: var(--pm-primary);"></i>游戏攻略
+                </a>
+                <a href="codes.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none" style="color: var(--pm-dark); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-gift" style="width: 24px; text-align: center; color: var(--pm-primary);"></i>兑换码
+                </a>
+                <a href="contact.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none" style="color: var(--pm-dark); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-headset" style="width: 24px; text-align: center; color: var(--pm-primary);"></i>联系我们
+                </a>
+                <a href="articles.html" class="d-flex align-items-center gap-2 py-2 text-decoration-none" style="color: var(--pm-dark); border-top: 1px solid #f1f5f9;">
+                    <i class="fas fa-newspaper" style="width: 24px; text-align: center; color: var(--pm-primary);"></i>活动文章
+                </a>
+                <a href="https://p.3633yx.com/Y3uQRj" class="pm-btn-primary justify-content-center mt-2" style="font-size: 1rem; padding: 0.75rem;">
+                    <i class="fas fa-download me-2"></i>立即下载游戏
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 72px;">
+        <!-- 页面标题 -->
+        <section class="position-relative d-flex align-items-center justify-content-center overflow-hidden" style="min-height: 50vh; background: linear-gradient(135deg, var(--pm-primary), var(--pm-secondary));">
+            <div class="position-absolute" style="inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5));"></div>
+            <div class="position-relative z-1 text-center px-3">
+                <h1 class="text-white fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem); text-shadow: 2px 4px 8px rgba(0,0,0,0.5);">
+                    <i class="fas fa-star me-3"></i>游戏特色
+                </h1>
+                <p class="text-white-50 mb-0" style="font-size: 1.125rem; max-width: 600px;">
+                    探索掌机小精灵的独特魅力，体验最纯正的宝可梦世界
+                </p>
+            </div>
+        </section>
+
+        <!-- 核心特色 -->
+        <section class="py-5" style="background: linear-gradient(180deg, white, var(--pm-light));">
+            <div class="pm-container">
+                <div class="pm-section-title pm-fade-in-up">
+                    <h2><i class="fas fa-fire me-2" style="color: var(--pm-primary);"></i>核心特色</h2>
+                    <div class="pm-title-bar"></div>
+                    <p>六大核心系统，带你重温经典宝可梦世界</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-primary pm-fade-in-up h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="pm-pokeball" style="width: 48px; height: 48px;"></div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">800+精灵收录</h3>
+                            <p class="text-secondary text-center mb-3">包含1至9世代所有口袋妖怪，共计800多种精灵，600多种技能以及上百种精灵特性，收集你的专属精灵图鉴！</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-primary"><i class="fas fa-star me-1"></i>持续更新中</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-secondary pm-fade-in-up pm-delay-1 h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(37,99,235,0.1));">
+                                    <i class="fas fa-cube fs-2" style="color: var(--pm-secondary);"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">3D建模技术</h3>
+                            <p class="text-secondary text-center mb-3">采用全新的3D建模技术，精准再现掌机中的精灵形象和战斗场景，带来沉浸式的视觉体验</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-primary" style="background: rgba(59,130,246,0.1); color: var(--pm-secondary);"><i class="fas fa-magic me-1"></i>高品质画面</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-accent pm-fade-in-up pm-delay-2 h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(245,158,11,0.1));">
+                                    <i class="fas fa-random fs-2" style="color: var(--pm-accent);"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">经典玩法还原</h3>
+                            <p class="text-secondary text-center mb-3">还原精灵捕捉、孵蛋、进化以及经典回合制战斗，包含属性相克等核心玩法</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-accent"><i class="fas fa-gamepad me-1"></i>原汁原味</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-green pm-fade-in-up pm-delay-3 h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(21,128,61,0.1));">
+                                    <i class="fas fa-bolt fs-2 text-success"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">Mega进化</h3>
+                            <p class="text-secondary text-center mb-3">支持Mega进化、Z招式等特殊进化形态，让你的精灵释放更强战斗力</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-primary" style="background: rgba(34,197,94,0.1); color: #16a34a;"><i class="fas fa-rocket me-1"></i>战力飙升</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-purple pm-fade-in-up pm-delay-4 h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(126,34,206,0.1));">
+                                    <i class="fas fa-trophy fs-2" style="color: #a855f7;"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">PVP竞技</h3>
+                            <p class="text-secondary text-center mb-3">多种竞技模式，实时对战、排名赛、公会战，与全球训练师一决高下</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-primary" style="background: rgba(168,85,247,0.1); color: #9333ea;"><i class="fas fa-globe me-1"></i>全球对战</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pm-card pm-card-pink pm-fade-in-up pm-delay-5 h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(236,72,153,0.1), rgba(190,24,93,0.1));">
+                                    <i class="fas fa-users fs-2" style="color: #ec4899;"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">社交互动</h3>
+                            <p class="text-secondary text-center mb-3">丰富的社交系统，公会、好友、交易、协作任务，与训练师们一起冒险</p>
+                            <div class="text-center">
+                                <span class="pm-tag pm-tag-primary" style="background: rgba(236,72,153,0.1); color: #db2777;"><i class="fas fa-heart me-1"></i>社交乐园</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏截图展示 -->
+        <section class="py-5" style="background: linear-gradient(180deg, var(--pm-light), white);">
+            <div class="pm-container">
+                <div class="pm-section-title pm-fade-in-up">
+                    <h2><i class="fas fa-images me-2" style="color: var(--pm-secondary);"></i>精彩画面</h2>
+                    <div class="pm-title-bar"></div>
+                    <p>3D建模技术打造沉浸式游戏体验</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="pm-fade-in-up rounded-4 overflow-hidden shadow-lg cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-1.png')">
+                            <div class="text-center" style="background: #1a1a2e;">
+                                <img src="img/screenshots/screenshot-1.png" alt="3D精灵战斗场景" class="w-100" style="max-height: 400px; object-fit: contain;">
+                            </div>
+                            <div class="p-3 bg-white">
+                                <h4 class="h6 fw-bold mb-1">3D精灵战斗</h4>
+                                <p class="text-secondary mb-0" style="font-size: 0.875rem;">炫酷战斗特效，热血回合制对决</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pm-fade-in-up pm-delay-1 rounded-4 overflow-hidden shadow-lg cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-2.png')">
+                            <div class="text-center" style="background: #1a1a2e;">
+                                <img src="img/screenshots/screenshot-2.png" alt="精灵收集界面" class="w-100" style="max-height: 400px; object-fit: contain;">
+                            </div>
+                            <div class="p-3 bg-white">
+                                <h4 class="h6 fw-bold mb-1">精灵收集</h4>
+                                <p class="text-secondary mb-0" style="font-size: 0.875rem;">800+精灵等你收集，打造专属图鉴</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pm-fade-in-up pm-delay-2 rounded-4 overflow-hidden shadow-lg cursor-pointer" onclick="openImageModal('img/screenshots/screenshot-3.png')">
+                            <div class="text-center" style="background: #1a1a2e;">
+                                <img src="img/screenshots/screenshot-3.png" alt="Mega进化效果" class="w-100" style="max-height: 400px; object-fit: contain;">
+                            </div>
+                            <div class="p-3 bg-white">
+                                <h4 class="h6 fw-bold mb-1">Mega进化</h4>
+                                <p class="text-secondary mb-0" style="font-size: 0.875rem;">释放精灵全部潜力，战力飙升</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色详情 -->
+        <section class="py-5 bg-white">
+            <div class="pm-container">
+                <div class="pm-section-title pm-fade-in-up">
+                    <h2><i class="fas fa-info-circle me-2" style="color: var(--pm-accent);"></i>特色详解</h2>
+                    <div class="pm-title-bar"></div>
+                    <p>深入了解掌机小精灵的每一个精彩系统</p>
+                </div>
+
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 pm-fade-in-up">
+                        <div class="rounded-4 shadow-lg overflow-hidden" style="background: #1a1a2e;">
+                            <img src="img/screenshots/screenshot-1.png" alt="精灵战斗系统" class="w-100" style="max-height: 500px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pm-fade-in-up">
+                        <h3 class="h3 fw-bold mb-3">经典回合制战斗</h3>
+                        <p class="text-secondary mb-4">完美还原经典宝可梦回合制战斗系统，包含属性相克、技能搭配、战术策略等核心玩法。每一场战斗都需要你精心策划，选择最佳的技能组合来战胜对手。</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>18种属性相克关系</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>600+技能自由搭配</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>特性系统深度策略</span></li>
+                            <li class="d-flex align-items-center gap-2"><i class="fas fa-check-circle text-success"></i><span>天气场地影响战局</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row g-5 align-items-center mt-3">
+                    <div class="col-lg-6 order-lg-2 pm-fade-in-up">
+                        <div class="rounded-4 shadow-lg overflow-hidden" style="background: #1a1a2e;">
+                            <img src="img/screenshots/screenshot-2.png" alt="精灵收集系统" class="w-100" style="max-height: 500px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 pm-fade-in-up">
+                        <h3 class="h3 fw-bold mb-3">精灵收集与养成</h3>
+                        <p class="text-secondary mb-4">从1到9世代，超过800种精灵等你收集。通过捕捉、孵蛋、交换等方式完善你的精灵图鉴，培养属于你的最强战队。</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>野外捕捉稀有精灵</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>孵蛋系统培育极品</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>努力值个体值培养</span></li>
+                            <li class="d-flex align-items-center gap-2"><i class="fas fa-check-circle text-success"></i><span>闪光精灵特殊收集</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row g-5 align-items-center mt-3">
+                    <div class="col-lg-6 pm-fade-in-up">
+                        <div class="rounded-4 shadow-lg overflow-hidden" style="background: #1a1a2e;">
+                            <img src="img/screenshots/screenshot-3.png" alt="Mega进化系统" class="w-100" style="max-height: 500px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pm-fade-in-up">
+                        <h3 class="h3 fw-bold mb-3">Mega进化与Z招式</h3>
+                        <p class="text-secondary mb-4">在关键时刻触发Mega进化，让你的精灵突破极限，释放前所未有的强大力量。更有Z招式系统，带来震撼的全屏特效。</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>多种Mega进化形态</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>Z招式全屏特效</span></li>
+                            <li class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-check-circle text-success"></i><span>极巨化战斗体验</span></li>
+                            <li class="d-flex align-items-center gap-2"><i class="fas fa-check-circle text-success"></i><span>专属技能解锁</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-5" style="background: linear-gradient(135deg, var(--pm-primary), var(--pm-secondary));">
+            <div class="pm-container text-center">
+                <h2 class="text-white fw-bold mb-3" style="font-size: clamp(1.5rem, 4vw, 2.5rem);">准备好开始冒险了吗？</h2>
+                <p class="text-white-50 mb-4" style="font-size: 1.125rem;">立即下载掌机小精灵，开启你的宝可梦训练师之旅</p>
+                <a href="https://p.3633yx.com/Y3uQRj" class="pm-btn-primary" style="font-size: 1.25rem; padding: 1rem 2.5rem; animation: pulse-glow 2s ease-in-out infinite;">
+                    <i class="fas fa-download me-2"></i>立即下载游戏
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="pm-footer">
+        <div class="pm-container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/icons/icon.png" alt="掌机小精灵游戏图标" class="rounded-3 me-3 shadow-sm" width="56" height="56">
+                        <div>
+                            <h2 class="h4 fw-bold mb-1">掌机小精灵</h2>
+                            <span class="badge" style="background: linear-gradient(135deg, var(--pm-accent), #f59e0b);">官网</span>
+                        </div>
+                    </div>
+                    <p class="text-white-50 mb-4" style="line-height: 1.8;">
+                        正版宝可梦IP授权手游，包含1-9世代800+精灵，3D建模还原经典玩法，支持捕捉、孵蛋、Mega进化等多种特色玩法。
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1);" title="微博">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1);" title="微信">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1);" title="QQ群">
+                            <i class="fab fa-qq"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3 class="h6 fw-bold mb-4" style="color: var(--pm-accent);">
+                        <i class="fas fa-link me-2"></i>快速链接
+                    </h3>
+                    <ul class="list-unstyled gap-2 d-flex flex-column">
+                        <li><a href="index.html" class="text-decoration-none">首页</a></li>
+                        <li><a href="features.html" class="text-decoration-none">游戏特色</a></li>
+                        <li><a href="guide.html" class="text-decoration-none">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-decoration-none">兑换码</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">联系我们</a></li>
+                        <li><a href="articles.html" class="text-decoration-none">活动文章</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3 class="h6 fw-bold mb-4" style="color: var(--pm-accent);">
+                        <i class="fas fa-balance-scale me-2"></i>法律信息
+                    </h3>
+                    <ul class="list-unstyled gap-2 d-flex flex-column mb-4">
+                        <li><a href="privacy.html" class="text-decoration-none">隐私政策</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">用户协议</a></li>
+                        <li><a href="sitemap.html" class="text-decoration-none">网站地图</a></li>
+                    </ul>
+                    <h3 class="h6 fw-bold mb-3" style="color: var(--pm-accent);">
+                        <i class="fas fa-download me-2"></i>资源下载
+                    </h3>
+                    <a href="https://p.3633yx.com/Y3uQRj" class="pm-btn-primary text-decoration-none" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+                        <i class="fas fa-gamepad me-2"></i>游戏下载
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-top border-white-10 pt-4">
+                <div class="p-4 rounded-3 mb-4" style="background: rgba(255,255,255,0.05);">
+                    <p class="text-white-50 text-center mb-2" style="font-size: 0.875rem;">
+                        <i class="fas fa-exclamation-triangle me-2" style="color: var(--pm-accent);"></i>
+                        抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。
+                    </p>
+                    <p class="text-white-50 text-center mb-0" style="font-size: 0.875rem;">
+                        适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+                    </p>
+                </div>
+                <p class="text-white-50 text-center mb-0" style="font-size: 0.75rem;">
+                    &copy; 2026 掌机小精灵官网 版权所有
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="pm-back-to-top" class="pm-back-to-top" onclick="scrollToTop()" aria-label="返回顶部">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- 联系客服悬浮按钮 -->
+    <a href="contact.html" class="pm-float-contact text-decoration-none">
+        <i class="fas fa-headphones fs-5" aria-hidden="true"></i>
+        <span>联系客服</span>
+    </a>
+
+    <script src="assets/js/jquery-4.0.0.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

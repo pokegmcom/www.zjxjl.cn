@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.pocketmon.cn/sitemap.xml
+Sitemap: https://www.zjxjl.cn/sitemap.xml
 
 Crawl-delay: 1

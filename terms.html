@@ -66,6 +66,27 @@
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .pm-btn-hover:hover,
+            .pm-card-hover:hover {
+                transform: none !important;
+            }
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .pm-btn-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .pm-btn-hover:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            .pm-card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .pm-card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             }
         }
     </style>
@@ -93,7 +114,8 @@
             
             <div class="flex items-center space-x-3">
                 <a href="https://p.3633yx.com/Y3uQRj" 
-                   class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md hover:scale-105 transition-transform">
+                   class="hidden md:block bg-pmPrimary text-white font-bold py-2 px-6 rounded-lg shadow-md hover:scale-105 transition-transform touch-manipulation"
+                   aria-label="立即下载游戏">
                     立即下载
                 </a>
                 <button class="md:hidden text-pmDark text-xl" id="pm-menu-toggle" aria-label="打开菜单">
@@ -110,7 +132,7 @@
                 <a href="codes.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">兑换码</a>
                 <a href="contact.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">联系我们</a>
                 <a href="article.html" class="text-pmDark hover:text-pmPrimary transition-colors py-2 border-b border-gray-100">活动文章</a>
-                <a href="https://p.3633yx.com/Y3uQRj" class="text-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md">立即下载</a>
+                <a href="https://p.3633yx.com/Y3uQRj" class="text-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md touch-manipulation" aria-label="立即下载游戏">立即下载</a>
             </div>
         </div>
     </header>
@@ -121,6 +143,7 @@
                 <img src="img/screenshots/hero-banner.png" 
                      alt="掌机小精灵游戏宣传图" 
                      class="w-full h-full object-cover object-center"
+                     width="1920" height="1080"
                      loading="lazy">
                 <div class="absolute inset-0 pm-gradient-overlay"></div>
                 <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-center">
@@ -137,7 +160,7 @@
                         <p class="text-gray-600 text-sm mb-8">更新时间：2026年1月1日</p>
                         
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-file-text text-pmPrimary mr-3"></i> 协议概述
+                            <i class="fa fa-file-text text-pmPrimary mr-3" aria-hidden="true"></i> 协议概述
                         </h3>
                         <p class="text-gray-600 mb-6">
                             欢迎使用掌机小精灵游戏服务（以下简称"本服务"）。本用户协议（以下简称"本协议"）是您与掌机小精灵（以下简称"我们"）之间就您使用本服务所订立的协议。
@@ -150,7 +173,7 @@
                         </p>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-user-plus text-pmSecondary mr-3"></i> 账号注册与管理
+                            <i class="fa fa-user-plus text-pmSecondary mr-3" aria-hidden="true"></i> 账号注册与管理
                         </h3>
                         
                         <div class="space-y-6 mb-8">
@@ -188,7 +211,7 @@
                         </div>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-gamepad text-pmPrimary mr-3"></i> 游戏规则
+                            <i class="fa fa-gamepad text-pmPrimary mr-3" aria-hidden="true"></i> 游戏规则
                         </h3>
                         <p class="text-gray-600 mb-4">您在使用本服务时，应遵守以下游戏规则：</p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
@@ -208,7 +231,7 @@
                         </p>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-diamond text-pmAccent mr-3"></i> 虚拟物品
+                            <i class="fa fa-diamond text-pmAccent mr-3" aria-hidden="true"></i> 虚拟物品
                         </h3>
                         <p class="text-gray-600 mb-4">关于游戏内虚拟物品的说明：</p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
@@ -222,7 +245,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-credit-card text-pmPrimary mr-3"></i> 付费服务
+                            <i class="fa fa-credit-card text-pmPrimary mr-3" aria-hidden="true"></i> 付费服务
                         </h3>
                         
                         <div class="bg-white rounded-lg p-6 mb-8">
@@ -248,7 +271,7 @@
                         </div>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-ban text-pmSecondary mr-3"></i> 免责声明
+                            <i class="fa fa-ban text-pmSecondary mr-3" aria-hidden="true"></i> 免责声明
                         </h3>
                         <p class="text-gray-600 mb-4">在法律允许的最大范围内，我们对以下情况不承担责任：</p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
@@ -262,7 +285,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-copyright text-pmAccent mr-3"></i> 知识产权
+                            <i class="fa fa-copyright text-pmAccent mr-3" aria-hidden="true"></i> 知识产权
                         </h3>
                         <p class="text-gray-600 mb-4">本服务及相关的所有内容（包括但不限于）：</p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
@@ -274,7 +297,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-gavel text-pmPrimary mr-3"></i> 服务变更与终止
+                            <i class="fa fa-gavel text-pmPrimary mr-3" aria-hidden="true"></i> 服务变更与终止
                         </h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
                             <li>我们有权随时修改、暂停或终止本服务的全部或部分内容</li>
@@ -285,7 +308,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-balance-scale text-pmSecondary mr-3"></i> 适用法律与争议解决
+                            <i class="fa fa-balance-scale text-pmSecondary mr-3" aria-hidden="true"></i> 适用法律与争议解决
                         </h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
                             <li>本协议的订立、执行和解释均适用中华人民共和国法律</li>
@@ -295,7 +318,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-info-circle text-pmAccent mr-3"></i> 其他条款
+                            <i class="fa fa-info-circle text-pmAccent mr-3" aria-hidden="true"></i> 其他条款
                         </h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
                             <li>本协议是我们与您之间关于本服务的完整协议，取代双方此前达成的任何口头或书面协议</li>
@@ -306,8 +329,8 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="index.html" class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:scale-105 transition-transform">
-                            <i class="fa fa-home mr-2"></i> 返回首页
+                        <a href="index.html" class="inline-block bg-pmPrimary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:scale-105 transition-transform touch-manipulation" aria-label="返回首页">
+                            <i class="fa fa-home mr-2" aria-hidden="true"></i> 返回首页
                         </a>
                     </div>
                 </div>
@@ -328,11 +351,11 @@
                 </div>
                 
                 <div class="flex space-x-6">
-                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" class="text-white hover:text-pmPrimary transition-colors text-xl" target="_blank" rel="noopener noreferrer">
-                        <i class="fa fa-qq"></i>
+                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" class="text-white hover:text-pmPrimary transition-colors text-xl touch-manipulation" target="_blank" rel="noopener noreferrer" aria-label="QQ联系">
+                        <i class="fa fa-qq" aria-hidden="true"></i>
                     </a>
-                    <span class="text-white hover:text-pmPrimary transition-colors text-xl cursor-pointer" title="微信公众号：小茂爱手游">
-                        <i class="fa fa-wechat"></i>
+                    <span class="text-white hover:text-pmPrimary transition-colors text-xl cursor-pointer touch-manipulation" title="微信公众号：小茂爱手游" aria-label="微信公众号">
+                        <i class="fa fa-wechat" aria-hidden="true"></i>
                     </span>
                 </div>
             </div>
@@ -375,12 +398,12 @@
     </footer>
 
     <!-- 返回顶部按钮 -->
-    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50 cursor-pointer" aria-label="返回顶部">
+    <button id="pm-backToTop" class="fixed bottom-8 right-8 bg-pmPrimary text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50 cursor-pointer touch-manipulation" aria-label="返回顶部">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- 联系客服悬浮按钮 -->
-    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center" aria-label="联系客服">
+    <a href="contact.html" class="fixed bottom-8 left-8 bg-pmAccent text-pmDark p-4 rounded-full shadow-lg z-50 pm-btn-hover flex items-center touch-manipulation" aria-label="联系客服">
         <i class="fa fa-headphones mr-2" aria-hidden="true"></i>
         <span class="hidden sm:inline font-bold">联系客服</span>
     </a>

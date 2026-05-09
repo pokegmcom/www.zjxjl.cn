@@ -159,38 +159,94 @@
                     </p>
                 </div>
                 
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- 官方QQ群 -->
-                    <div class="bg-pmLight rounded-xl p-8 shadow-xl border-2 border-pmPrimary/30 transform transition-transform hover:scale-105">
-                        <h3 class="text-2xl font-bold text-pmDark mb-6 flex items-center">
-                            <i class="fa fa-qq text-pmPrimary mr-3 text-2xl"></i> 官方QQ群
-                        </h3>
-                        <div class="flex items-center mb-4">
-                            <span class="text-gray-600 w-20">群号：</span>
-                            <span class="font-bold text-pmDark">1028266021</span>
+                <div class="max-w-6xl mx-auto">
+                    <!-- 主要联系方式 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <!-- 官方QQ群 -->
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-8 shadow-xl text-white transform transition-transform hover:scale-105">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa fa-qq text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">官方QQ群</h3>
+                            <div class="mb-4">
+                                <span class="text-white/80 text-sm">群号：</span>
+                                <span class="font-bold text-xl">1028266021</span>
+                            </div>
+                            <p class="text-white/80 mb-6">加入QQ群，与其他训练家交流，获取最新活动信息和游戏攻略</p>
+                            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" 
+                               class="inline-flex items-center bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow-md w-full justify-center hover:bg-blue-50 transition-colors"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-link mr-2"></i> 立即加入QQ群
+                            </a>
                         </div>
-                        <p class="text-gray-600 mb-6">加入QQ群，与其他训练家交流，获取最新活动信息和游戏攻略</p>
-                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0lKMdD8tjdXZqOaVJQhpoVRM3n3jVcuW&jump_from=webapi&authKey=HiwrH377t7DtlHW6r+ijkVX0avgk9BP/MxR/+b29KCpvmp+Lg3YePqZYkUVbs6Dr" 
-                           class="inline-flex items-center bg-pmPrimary text-white font-bold py-3 px-6 rounded-lg shadow-md w-full justify-center pm-btn-hover"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-link mr-2"></i> 立即加入QQ群
-                        </a>
+                        
+                        <!-- 官方公众号 -->
+                        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-8 shadow-xl text-white transform transition-transform hover:scale-105">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa fa-weixin text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">官方公众号</h3>
+                            <p class="text-white/80 mb-4">小茂爱手游</p>
+                            <p class="text-white/80 mb-6">扫码关注获取最新兑换码、游戏资讯和专属客服礼包</p>
+                            <div class="bg-white p-3 rounded-lg shadow-md mb-4">
+                                <img src="img/qr/official-qr.png" 
+                                     alt="掌机小精灵官方公众号二维码：小茂爱手游" 
+                                     class="w-full h-auto object-contain">
+                            </div>
+                            <p class="text-center text-yellow-200 font-medium text-sm">
+                                <i class="fa fa-star mr-1"></i> 回复【客服】获取专属礼包
+                            </p>
+                        </div>
+                        
+                        <!-- 微博官方 -->
+                        <div class="bg-gradient-to-br from-red-500 to-orange-500 rounded-xl p-8 shadow-xl text-white transform transition-transform hover:scale-105">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa fa-weibo text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">官方微博</h3>
+                            <p class="text-white/80 mb-6">关注官方微博，获取最新游戏资讯、活动信息和玩家福利</p>
+                            <a href="#" 
+                               class="inline-flex items-center bg-white text-red-500 font-bold py-3 px-6 rounded-lg shadow-md w-full justify-center hover:bg-red-50 transition-colors"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-external-link mr-2"></i> 访问官方微博
+                            </a>
+                        </div>
                     </div>
                     
-                    <!-- 官方公众号 -->
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border-4 border-pmPrimary text-center max-w-xs mx-auto transform transition-all hover:rotate-1 hover:scale-105 pm-glow">
-                        <div class="inline-block p-3 bg-pmPrimary/10 rounded-full mb-6">
-                            <i class="fa fa-weixin text-4xl text-pmPrimary"></i>
+                    <!-- 额外联系方式 -->
+                    <div class="bg-pmLight rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold text-pmDark mb-6 text-center">其他联系方式</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex items-center p-4 bg-white rounded-xl">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fa fa-envelope text-xl text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-pmDark">官方邮箱</h4>
+                                    <p class="text-gray-600 text-sm">service@pocketmon.cn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-white rounded-xl">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fa fa-gamepad text-xl text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-pmDark">官方网站</h4>
+                                    <p class="text-gray-600 text-sm">www.pocketmon.cn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-white rounded-xl">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fa fa-headphones text-xl text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-pmDark">客服热线</h4>
+                                    <p class="text-gray-600 text-sm">400-888-8888</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-pmDark mb-4">官方公众号</h3>
-                        <p class="text-gray-600 mb-6 font-medium">小茂爱手游</p>
-                        <p class="text-gray-600 mb-6">扫码关注获取最新兑换码、游戏资讯和专属客服礼包</p>
-                        <div class="bg-white p-4 rounded-lg inline-block shadow-md mb-6 border-2 border-gray-200">
-                            <img src="img/qr/official-qr.png" 
-                                 alt="掌机小精灵官方公众号二维码：小茂爱手游" 
-                                 class="w-64 h-64 object-contain">
-                        </div>
-                        <p class="text-pmPrimary font-bold text-sm">回复【客服】获取专属礼包</p>
                     </div>
                 </div>
             </div>

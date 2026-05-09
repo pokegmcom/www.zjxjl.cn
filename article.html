@@ -157,69 +157,205 @@
                 </div>
                 
                 <div class="max-w-6xl mx-auto">
+                    <!-- 文章筛选标签 -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-8">
+                        <button class="px-6 py-2 bg-pmPrimary text-white rounded-full font-medium transition-all hover:scale-105">全部</button>
+                        <button class="px-6 py-2 bg-white text-gray-600 rounded-full font-medium transition-all hover:scale-105 hover:bg-pmPrimary hover:text-white">福利活动</button>
+                        <button class="px-6 py-2 bg-white text-gray-600 rounded-full font-medium transition-all hover:scale-105 hover:bg-pmSecondary hover:text-white">竞技活动</button>
+                        <button class="px-6 py-2 bg-white text-gray-600 rounded-full font-medium transition-all hover:scale-105 hover:bg-pmAccent hover:text-pmDark">游戏资讯</button>
+                        <button class="px-6 py-2 bg-white text-gray-600 rounded-full font-medium transition-all hover:scale-105 hover:bg-pmDark hover:text-white">版本更新</button>
+                    </div>
+                    
                     <!-- 文章卡片 -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                         <!-- 文章1 -->
-                        <a href="articles/article-20260313.html" class="bg-pmLight rounded-xl overflow-hidden shadow-md pm-card-hover block">
-                            <div class="h-48 overflow-hidden">
+                        <a href="articles/article-20260313.html" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative">
                                 <img src="img/screenshots/hero-banner.png" 
                                      alt="掌机小精灵101跨服全民福利活动" 
                                      class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-pmPrimary text-white text-xs px-3 py-1 rounded-full font-medium">限时活动</span>
+                                </div>
                             </div>
                             <div class="p-6">
                                 <div class="flex items-center text-gray-500 text-sm mb-3">
                                     <i class="fa fa-calendar mr-2"></i>
                                     2026年3月13日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 10,258
                                 </div>
                                 <h3 class="font-bold text-xl text-pmDark mb-3">掌机小精灵101跨服全民福利</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-600 mb-4 line-clamp-2">
                                     领取扭蛋币*20，金币*2026101，礼包码zjxjl2026101，有效期2026年3月14日11:00-3月20日23:59
                                 </p>
-                                <div class="flex items-center text-pmPrimary font-medium">
-                                    阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-pmPrimary font-medium">
+                                        阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
                                 </div>
                             </div>
                         </a>
                         
-                        <!-- 文章2（示例） -->
-                        <div class="bg-pmLight rounded-xl overflow-hidden shadow-md pm-card-hover">
-                            <div class="h-48 overflow-hidden bg-gray-200 flex items-center justify-center">
-                                <i class="fa fa-newspaper-o text-5xl text-gray-400"></i>
+                        <!-- 文章2 -->
+                        <a href="#" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                                <i class="fa fa-gift text-6xl text-white/30"></i>
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-pmAccent text-pmDark text-xs px-3 py-1 rounded-full font-medium">福利活动</span>
+                                </div>
                             </div>
                             <div class="p-6">
                                 <div class="flex items-center text-gray-500 text-sm mb-3">
                                     <i class="fa fa-calendar mr-2"></i>
-                                    即将发布
+                                    2026年3月10日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 8,542
                                 </div>
-                                <h3 class="font-bold text-xl text-pmDark mb-3">新活动预告</h3>
-                                <p class="text-gray-600 mb-4">
-                                    更多精彩活动即将上线，敬请期待！
+                                <h3 class="font-bold text-xl text-pmDark mb-3">周末双倍经验狂欢开启</h3>
+                                <p class="text-gray-600 mb-4 line-clamp-2">
+                                    本周末（3月14日-15日）全服开启双倍经验狂欢，精灵升级速度翻倍！完成任务还有额外奖励。
                                 </p>
-                                <div class="flex items-center text-gray-400 font-medium">
-                                    即将发布 <i class="fa fa-clock-o ml-2"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-gray-400 font-medium">
+                                        即将开始 <i class="fa fa-clock-o ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         
-                        <!-- 文章3（示例） -->
-                        <div class="bg-pmLight rounded-xl overflow-hidden shadow-md pm-card-hover">
-                            <div class="h-48 overflow-hidden bg-gray-200 flex items-center justify-center">
-                                <i class="fa fa-newspaper-o text-5xl text-gray-400"></i>
+                        <!-- 文章3 -->
+                        <a href="#" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+                                <i class="fa fa-trophy text-6xl text-white/30"></i>
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-pmSecondary text-white text-xs px-3 py-1 rounded-full font-medium">竞技活动</span>
+                                </div>
                             </div>
                             <div class="p-6">
                                 <div class="flex items-center text-gray-500 text-sm mb-3">
                                     <i class="fa fa-calendar mr-2"></i>
-                                    即将发布
+                                    2026年3月8日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 12,890
                                 </div>
-                                <h3 class="font-bold text-xl text-pmDark mb-3">新活动预告</h3>
-                                <p class="text-gray-600 mb-4">
-                                    更多精彩活动即将上线，敬请期待！
+                                <h3 class="font-bold text-xl text-pmDark mb-3">跨服赛S3赛季正式开启</h3>
+                                <p class="text-gray-600 mb-4 line-clamp-2">
+                                    第三赛季跨服赛热血开启！新赛季增加段位奖励和专属称号，还有机会获得稀有Mega石！
                                 </p>
-                                <div class="flex items-center text-gray-400 font-medium">
-                                    即将发布 <i class="fa fa-clock-o ml-2"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-pmPrimary font-medium">
+                                        阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                        
+                        <!-- 文章4 -->
+                        <a href="#" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                                <i class="fa fa-bolt text-6xl text-white/30"></i>
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">版本更新</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center text-gray-500 text-sm mb-3">
+                                    <i class="fa fa-calendar mr-2"></i>
+                                    2026年3月5日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 15,678
+                                </div>
+                                <h3 class="font-bold text-xl text-pmDark mb-3">v2.8.0版本更新公告</h3>
+                                <p class="text-gray-600 mb-4 line-clamp-2">
+                                    新增第9世代精灵收录，天气系统全面升级，修复了若干已知问题，优化了游戏性能。
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-pmPrimary font-medium">
+                                        阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- 文章5 -->
+                        <a href="#" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                                <i class="fa fa-fire text-6xl text-white/30"></i>
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">热门攻略</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center text-gray-500 text-sm mb-3">
+                                    <i class="fa fa-calendar mr-2"></i>
+                                    2026年3月3日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 9,456
+                                </div>
+                                <h3 class="font-bold text-xl text-pmDark mb-3">最强精灵配队攻略</h3>
+                                <p class="text-gray-600 mb-4 line-clamp-2">
+                                    分享几套实用的PVP精灵配队，从入门到精通，帮助你快速提升竞技水平！
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-pmPrimary font-medium">
+                                        阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- 文章6 -->
+                        <a href="#" class="bg-white rounded-xl overflow-hidden shadow-md pm-card-hover block">
+                            <div class="h-48 overflow-hidden relative bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                                <i class="fa fa-diamond text-6xl text-white/30"></i>
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">游戏资讯</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center text-gray-500 text-sm mb-3">
+                                    <i class="fa fa-calendar mr-2"></i>
+                                    2026年3月1日
+                                    <span class="mx-2">•</span>
+                                    <i class="fa fa-eye mr-1"></i> 7,234
+                                </div>
+                                <h3 class="font-bold text-xl text-pmDark mb-3">限定扭蛋概率提升公告</h3>
+                                <p class="text-gray-600 mb-4 line-clamp-2">
+                                    限定精灵扭蛋概率提升！闪光皮卡丘、闪光小火龙等稀有精灵概率大幅提升，活动仅限3天！
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-pmPrimary font-medium">
+                                        阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">
+                                        <i class="fa fa-share-alt mr-1"></i> 分享
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- 加载更多按钮 -->
+                    <div class="text-center">
+                        <button class="bg-white text-pmPrimary font-bold py-3 px-8 rounded-lg shadow-md hover:bg-pmPrimary hover:text-white transition-all">
+                            加载更多文章 <i class="fa fa-angle-double-down ml-2"></i>
+                        </button>
                     </div>
                 </div>
             </div>

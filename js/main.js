@@ -275,7 +275,7 @@ window.loadArticles = function(containerId, options) {
         html += '<div class="col-md-6 col-lg-4">';
         html += '<article class="pm-article-card pm-fade-in-up h-100">';
         html += '<div class="overflow-hidden">';
-        html += '<img src="' + (article.image || 'img/screenshots/screenshot-1.png') + '" alt="' + article.title + '" class="pm-article-img" loading="lazy">';
+        html += '<img src="' + (article.image || 'img/screenshots/screenshot-1.webp') + '" alt="' + article.title + '" class="pm-article-img" loading="lazy">';
         html += '</div>';
         html += '<div class="pm-article-body">';
         html += '<span class="pm-tag pm-tag-primary mb-2">' + (article.category || '活动') + '</span>';

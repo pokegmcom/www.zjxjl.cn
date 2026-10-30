@@ -34,15 +34,15 @@
             "name": "掌机小精灵官网",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.zjxjl.cn/img/icons/icon.png"
+                "url": "https://www.zjxjl.cn/img/icons/icon.webp"
             }
         }
     }
     </script>
 
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/libs/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css?v=20261031c">
+    <link rel="stylesheet" href="../assets/libs/font-awesome/css/all.min.css?v=20261031c">
+    <link rel="stylesheet" href="../css/main.css?v=20261031c">
 </head>
 <body>
 
@@ -65,7 +65,7 @@
         <div class="pm-container">
             <div class="d-flex justify-content-between align-items-center py-3">
                 <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
-                    <img src="../img/icons/icon.png" alt="掌机小精灵游戏图标" class="rounded-3 shadow-sm" width="40" height="40">
+                    <img src="../img/icons/icon.webp" alt="掌机小精灵游戏图标" class="rounded-3 shadow-sm" width="40" height="40" srcset="../img/icons/icon-192.webp 192w, ../img/icons/icon-96.webp 96w" sizes="(max-width: 768px) 100vw, 420px" decoding="async" loading="eager">
                     <div>
                         <span class="fs-4 fw-bold" style="color: var(--pm-primary);">掌机小精灵</span>
                         <span class="badge ms-1" style="background: linear-gradient(135deg, var(--pm-accent), #f59e0b);">官网</span>
@@ -123,7 +123,7 @@
     <main style="padding-top: 72px;">
         <!-- 文章头部Banner -->
         <section class="position-relative" style="height: 50vh; min-height: 300px;">
-            <img src="{{ARTICLE_BANNER}}" alt="{{ARTICLE_TITLE}}" class="w-100 h-100" style="object-fit: cover;">
+            <img src="{{ARTICLE_BANNER}}" alt="{{ARTICLE_TITLE}}" class="w-100 h-100" style="object-fit: cover;" decoding="async" loading="lazy">
             <div class="position-absolute" style="inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));"></div>
             <div class="position-absolute bottom-0 start-0 end-0 p-4 p-md-5 text-center">
                 <h1 class="text-white fw-bold mb-3" style="font-size: clamp(1.5rem, 4vw, 2.5rem); text-shadow: 2px 4px 8px rgba(0,0,0,0.7);">
@@ -196,7 +196,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-6">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="../img/icons/icon.png" alt="掌机小精灵游戏图标" class="rounded-3 me-3 shadow-sm" width="56" height="56">
+                        <img src="../img/icons/icon.webp" alt="掌机小精灵游戏图标" class="rounded-3 me-3 shadow-sm" width="56" height="56" srcset="../img/icons/icon-192.webp 192w, ../img/icons/icon-96.webp 96w" sizes="(max-width: 768px) 100vw, 420px" decoding="async" loading="eager">
                         <div>
                             <h2 class="h4 fw-bold mb-1">掌机小精灵</h2>
                             <span class="badge" style="background: linear-gradient(135deg, var(--pm-accent), #f59e0b);">官网</span>
@@ -285,15 +285,13 @@
                 date: "2026-03-13",
                 author: "掌机小精灵官方",
                 category: "活动",
-                image: "../img/screenshots/hero-banner.png",
+                image: "../img/screenshots/hero-banner.webp",
                 url: "article-20260313.html"
             }
         ];
     </script>
 
-    <script src="../assets/js/jquery-4.0.0.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=20261031c"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 加载相关文章（排除当前文章）
@@ -312,7 +310,7 @@
                     html += '<div class="col-md-4">';
                     html += '<a href="' + article.url + '" class="pm-article-card text-decoration-none d-block h-100">';
                     html += '<div class="overflow-hidden">';
-                    html += '<img src="' + article.image + '" alt="' + article.title + '" class="pm-article-img">';
+                    html += '<img src="' + article.image + '" alt="' + article.title + '" class="pm-article-img" decoding="async" loading="lazy">';
                     html += '</div>';
                     html += '<div class="pm-article-body">';
                     html += '<span class="pm-tag pm-tag-primary mb-2">' + article.category + '</span>';
